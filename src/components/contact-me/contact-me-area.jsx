@@ -48,7 +48,7 @@ const ContactMeArea = () => {
                                         </li>
                                         <li>
                                             <h5 className="title">Email</h5>
-                                            <p><a href="mailto:edublink@example.com">edublink@example.com</a></p>
+                                            <p><a href="mailto:edublink@example.com">COCO@example.com</a></p>
                                         </li>
                                         <li>
                                             <h5 className="title">Phone</h5>
