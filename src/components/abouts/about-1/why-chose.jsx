@@ -9,16 +9,15 @@ const WhyChose = () => {
         <section className="why-choose-area-2 section-gap-large">
             <div className="container edublink-animated-shape">
                 <div className="section-title section-center" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-                    <span className="pre-title">Why choose edublink</span>
-                    <h2 className="title">The Best <span className="color-secondary">Beneficial</span> Side <br /> of EduBlink</h2>
+                    <span className="pre-title">Các phương pháp</span>
+                    <h2 className="title">Điều trị <span className="color-secondary">ADHD</span> </h2>
                     <span className="shape-line"><i className="icon-19"></i></span>
                 </div>
-                <div className="row g-5">
-                    <ChoseBox color="color-primary-style" icon="45" title="High Quality Courses" subtitle="Lorem ipsum dolor sit amet conset ur elit sed eiusmod ex tempor inc labore dolore magna." />
+                <div className="row g-5 d-flex justify-content-center">
+                    <ChoseBox color="color-primary-style" icon="45" title="Liệu pháp hành vi" subtitle="Liệu pháp hành vi là biện pháp can thiệp phổ biến ở Việt Nam, có thể được áp dụng với hầu hết các trẻ mắc chứng rối loạn tăng giảm chú ý." />
 
-                    <ChoseBox color="color-secondary-style" icon="46" title="Life Time Access" subtitle="Lorem ipsum dolor sit amet conset ur elit sed eiusmod ex tempor inc labore dolore magna." />
+                    <ChoseBox color="color-secondary-style" icon="46" title="Điều trị bằng thuốc" subtitle="Điều trị ADHD bằng thuốc thường sử dụng thuốc kích thích hoặc thuốc không kích thích để giảm triệu chứng. Điều này thường đòi hỏi sự theo dõi của bác sĩ và có thể kết hợp với phương pháp tâm lý học." />
 
-                    <ChoseBox color="color-extra08-style" icon="47" title="Expert Instructors" subtitle="Lorem ipsum dolor sit amet conset ur elit sed eiusmod ex tempor inc labore dolore magna." />
                 </div>
                 <ul className="shape-group">
                     <li className="shape-5" data-sal-delay="500" data-sal="fade" data-sal-duration="200">

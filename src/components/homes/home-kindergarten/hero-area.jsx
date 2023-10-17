@@ -16,7 +16,12 @@ function FeatureBox({ color, icon, content }) {
         </div>
     )
 }
-
+function handleClick() {
+    const anchor = document.querySelector('#courses-area');
+    if (anchor) {
+        anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+}
 const HeroArea = () => {
     const { mouseDirection, mouseReverse } = useMouseMoveUI();
     return (
@@ -27,11 +32,16 @@ const HeroArea = () => {
                         <div className="banner-content">
                             <h1 className="title" data-sal-delay="100" data-sal="slide-up" data-sal-duration="1000">Gamification dành cho trẻ em ADHD</h1>
                             <p data-sal-delay="200" data-sal="slide-up" data-sal-duration="1000">Mang đến trải nghiệm Gamification thú vị và hữu ích như một phương pháp điều trị ADHD giúp các em mắc ADHD học tập và phát triển hiệu quả hơn.</p>
+                            <div className="banner-btn" data-sal-delay="400" data-sal="slide-up" data-sal-duration="1000">
+                                <button className="edu-btn btn-curved" onClick={() => handleClick()}>
+                                    <a >Tìm hiểu ngay <i className="icon-4"></i></a>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
+            
             <div className="banner-gallery">
                 <div className="thumbnail thumbnail-1" data-sal-delay="500" data-sal="slide-up" data-sal-duration="1000">
                 </div>

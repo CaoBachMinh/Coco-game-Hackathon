@@ -9,7 +9,7 @@ const courses = course_data.filter(course => course.kindergarten_course)
 const CoursesArea = () => {
     const { mouseDirection, mouseReverse } = useMouseMoveUI();
     return (
-        <div className="edu-course-area course-area-7">
+        <div className="edu-course-area course-area-7" id='courses-area'>
             <div className="container edublink-animated-shape">
                 <div className="section-title section-center" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
                     <span className="pre-title pre-textsecondary">Trò chơi phổ biến</span>
@@ -25,16 +25,16 @@ const CoursesArea = () => {
                                     <div className="inner">
                                         <div className="thumbnail">
                                             <Link href={`${link}`}>
-                                                <a>
+                                              <a target="_blank" rel="noopener noreferrer">
                                                 <img src={`/assets/images/course/course-04/${img}`} alt="Course Meta" />
-                                                </a>
+                                              </a>
                                             </Link>
                                         </div>
                                         <div className="content">
                                             <span className="course-level">{level}</span>
                                             <h5 className="title">
                                                 <Link href={`${link}`}>
-                                                    <a>{title}</a>
+                                                    <a target="_blank" rel="noopener noreferrer">{title}</a>
                                                 </Link>
                                             </h5>
                                             <p>{short_desc}</p>
