@@ -3,6 +3,8 @@ import { FooterTwo, HeaderThree } from '../../../layout';
 import AboutArea from './about-area';
 import CoursesArea from './courses-area';
 import HeroArea from './hero-area';
+import TeamArea from '../../abouts/about-2/team-area';
+import BrandArea from '../../abouts/about-1/brand-area';
 
 const index = () => {
     return (
@@ -12,6 +14,7 @@ const index = () => {
                 <HeroArea/>
                 <AboutArea/>
                 <CoursesArea/>
+                <TeamArea/>
                 <FooterTwo />
             </div>
         </div>

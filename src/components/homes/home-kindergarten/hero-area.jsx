@@ -25,13 +25,8 @@ const HeroArea = () => {
                 <div className="row justify-content-center">
                     <div className="col-lg-8">
                         <div className="banner-content">
-                            <h1 className="title" data-sal-delay="100" data-sal="slide-up" data-sal-duration="1000">A Brighter Future For Kids</h1>
-                            <p data-sal-delay="200" data-sal="slide-up" data-sal-duration="1000">Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit.</p>
-                            <div className="banner-btn" data-sal-delay="400" data-sal="slide-up" data-sal-duration="1000">
-                                <Link href="#">
-                                    <a className="edu-btn btn-curved">Find game <i className="icon-4"></i></a>
-                                </Link>
-                            </div>
+                            <h1 className="title" data-sal-delay="100" data-sal="slide-up" data-sal-duration="1000">Gamification dành cho trẻ em ADHD</h1>
+                            <p data-sal-delay="200" data-sal="slide-up" data-sal-duration="1000">Mang đến trải nghiệm Gamification thú vị và hữu ích như một phương pháp điều trị ADHD giúp các em mắc ADHD học tập và phát triển hiệu quả hơn.</p>
                         </div>
                     </div>
                 </div>

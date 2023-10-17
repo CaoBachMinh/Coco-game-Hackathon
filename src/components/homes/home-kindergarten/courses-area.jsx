@@ -12,19 +12,19 @@ const CoursesArea = () => {
         <div className="edu-course-area course-area-7">
             <div className="container edublink-animated-shape">
                 <div className="section-title section-center" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-                    <span className="pre-title pre-textsecondary">Popular Games</span>
-                    <h2 className="title">Pick A Game To Get Started</h2>
+                    <span className="pre-title pre-textsecondary">Trò chơi phổ biến</span>
+                    <h2 className="title">Lựa chọn trò chơi để trải nghiệm</h2>
                     <span className="shape-line"><i className="icon-19"></i></span>
                 </div>
                 <div className="row g-5 d-flex justify-content-center">
                     {courses.slice(0,2).map((course) => {
-                        const { id, bg_color, img, level, title, short_desc} = course;
+                        const { id, bg_color, img, level, title, short_desc, link} = course;
                         return (
                             <div key={id} className="col-12 col-lg-4 col-md-6" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
                                 <div className={`edu-course course-style-7 ${bg_color}`}>
                                     <div className="inner">
                                         <div className="thumbnail">
-                                            <Link href={`${id}`}>
+                                            <Link href={`${link}`}>
                                                 <a>
                                                 <img src={`/assets/images/course/course-04/${img}`} alt="Course Meta" />
                                                 </a>
@@ -33,7 +33,7 @@ const CoursesArea = () => {
                                         <div className="content">
                                             <span className="course-level">{level}</span>
                                             <h5 className="title">
-                                                <Link href={`${id}`}>
+                                                <Link href={`${link}`}>
                                                     <a>{title}</a>
                                                 </Link>
                                             </h5>

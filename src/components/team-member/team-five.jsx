@@ -7,13 +7,13 @@ const TeamFive = ({ instructor }) => {
             <div className="inner">
                 <div className="thumbnail-wrap">
                     <div className="thumbnail">
-                        <Link href={`/team-details/${instructor.id}`}>
+                        <Link href={`#`}>
                             <a>
                                 <img src={`/assets/images/team/team-02/${instructor.img}`} alt="team images" />
                             </a>
                         </Link>
                     </div>
-                    <ul className="team-share-info">
+                    {/* <ul className="team-share-info">
                         {instructor.social_links.map((social, i) => (
                             <li key={i}>
                                 <a href={social.link} target={social.target ? social.target : ''}>
@@ -21,11 +21,11 @@ const TeamFive = ({ instructor }) => {
                                 </a>
                             </li>
                         ))}
-                    </ul>
+                    </ul> */}
                 </div>
                 <div className="content">
                     <h5 className="title">
-                        <Link href={`/team-details/${instructor.id}`}>
+                        <Link href={`#`}>
                             <a>{instructor.name}</a>
                         </Link>
                     </h5>

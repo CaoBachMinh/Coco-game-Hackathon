@@ -14,9 +14,6 @@ const AboutArea = () => {
                             <div className="main-img-1">
                                 <img src="/assets/images/about/about-09.png" alt="About Image" />
                             </div>
-                            <div className="main-img-2 bounce-slide">
-                                <img src="/assets/images/about/about-10.png" alt="About Image" />
-                            </div>
                             <ul className="shape-group">
                                 <li className="shape-1">
                                     <img src="/assets/images/about/shape-11.png" alt="Shape" />
@@ -38,25 +35,20 @@ const AboutArea = () => {
                     <div className="col-lg-6">
                         <div className="about-content">
                             <div className="section-title section-left" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-                                <span className="pre-title pre-textsecondary">Welcome to the EduBlink</span>
-                                <h2 className="title">Welcome To Best Preschool Class Center</h2>
+                                <span className="pre-title pre-textsecondary">Chào mừng bạn đến với CoCoGame</span>
+                                <h2 className="title">Cải thiện ADHD với phương pháp Gamification!</h2>
                                 <span className="shape-line"><i className="icon-19"></i></span>
-                                <p>Magna aliquaenim minim veniam quis nostrud exercitation ullamco laborisLorem ipsum dolor sit amet consectetur adipisicing elit sed do eius tempor incididunt labore.</p>
+                                <p>CoCoGame là dự án mang đến các trò chơi trải nghiệm Gamification cho các bạn nhỏ trong quá trình điều trị ADHD nhằm tạo ra môi trường số có phương pháp cải thiện, đo lường và hỗ trợ phụ huynh, nhà trường và bản thân các em nhỏ. ADHD (Attention-Deficit/Hyperactivity Disorder) là một chứng rối loạn sức khỏe tâm thần phổ biến ở trẻ em và thanh thiếu niên, gây ra các vấn đề về chú ý và hiếu động. ADHD có thể ảnh hưởng đến khả năng học tập, giao tiếp và tương tác xã hội của các em.</p>
                             </div>
                             <div className="about-mission" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
                                 <div className="row g-5 row--20">
                                     <div className="col-lg-6">
-                                        <h5 className="title">Our Vision</h5>
-                                        <p>Magna aliquaenim minim veniamquis nostrud exercitation ulamco laboris Lorem ipsum dolor sit amet.</p>
-                                        <ul className="features-list">
-                                            <li>Transportation</li>
-                                            <li>Outdoor Games</li>
-                                        </ul>
+                                        <h5 className="title">Tầm nhìn của dự án</h5>
+                                        <p>Tạo ra một thế giới nơi tất cả trẻ em mắc ADHD có cơ hội phát huy hết tiềm năng của mình thông qua sức mạnh của gamification.</p>
                                     </div>
                                     <div className="col-lg-6">
-                                        <h5 className="title">Our Mission</h5>
-                                        <p>Consectetur do eius adipisicing elit sed do eius tempor incididunt labore.</p>
-                                        <p>dolore magna aliqua. Ut enim ad minim veniam quis nosud exercitation ulamco.</p>
+                                        <h5 className="title">Sứ mệnh của dự án</h5>
+                                        <p>Phát triển và cung cấp các giải pháp gamification sáng tạo giúp trẻ em mắc ADHD học tập, phát triển và thành công.</p>
                                     </div>
                                 </div>
                             </div>

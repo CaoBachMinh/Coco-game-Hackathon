@@ -20,7 +20,7 @@ const HeaderThree = () => {
                 <div id="edu-sticky-placeholder"></div>
                 <div className={`header-mainmenu ${sticky ? 'edu-sticky' : ''}`}>
                     <div className="container-fluid">
-                        <div className="header-navbar">
+                        <div className="header-navbar d-flex justify-content-center">
                             <div className="header-brand">
                                 <div className="logo">
                                     <Link href="/">
@@ -30,29 +30,6 @@ const HeaderThree = () => {
                                         </a>
                                     </Link>
                                 </div>
-                            </div>
-
-                            <div className="header-mainnav">
-                                <nav className="mainmenu-nav">
-                                    <MainMenu />
-                                </nav>
-                            </div>
-
-                            <div className="header-right">
-                                <ul className="header-action">
-
-                                    <li className="header-btn">
-                                        <Link href="#">
-                                            <a className="edu-btn btn-medium btn-curved">Contact us <i className="icon-4"></i></a>
-                                        </Link>
-                                    </li>
-
-                                    <li className="mobile-menu-bar d-block d-xl-none">
-                                        <button className="hamberger-button" onClick={() => setIsOpen(true)}>
-                                            <i className="icon-54"></i>
-                                        </button>
-                                    </li>
-                                </ul>
                             </div>
                         </div>
                     </div>

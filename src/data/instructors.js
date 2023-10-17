@@ -7,21 +7,21 @@ const instructors_data = [
             {link: 'http://twitter.com', target: '_blank', icon: 'icon-twitter'},
             {link: 'https://www.linkedin.com/', target: '_blank', icon: 'icon-linkedin2'}
         ],
-        name:'Jane Seymour',
-        title:'UI Designer',
+        name:'Nguyễn Khánh Ngân',
+        title:'Lớp 11D1 Trường THPT chuyên Lê Quý Đôn, Đà Nẵng',
         delay:'50',
         sm_text:"Consectetur adipisicing elit, sed do eius mod tempor incididunt"
     },
     {
         id:2,
-        img:'team-02.webp',
+        img:'team-03.webp',
         social_links:[
             {link: 'http://facebook.com', target: '_blank', icon: 'icon-facebook'},
             {link: 'http://twitter.com', target: '_blank', icon: 'icon-twitter'},
             {link: 'https://www.linkedin.com/', target: '_blank', icon: 'icon-linkedin2'}
         ],
-        name:'Edward Norton',
-        title:'Web Developer',
+        name:'Nguyễn Đỗ Thiện Nhân',
+        title:'Lớp 11D1 Trường THPT chuyên Lê Quý Đôn, Đà Nẵng',
         delay:'100',
         sm_text:"Consectetur adipisicing elit, sed do eius mod tempor incididunt"
     },
