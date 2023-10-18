@@ -1759,7 +1759,7 @@ const course_data = [
  // kindergarten course 
   {
     id: 26,
-    link:'https://coco-flip-game.vercel.app/',
+    link:'https://flip-game-vert.vercel.app/',
     kindergarten_course:true,
     duration: '5 Weeks',
     course_outline:'Online + Onsite',
@@ -1832,7 +1832,7 @@ const course_data = [
   },
   {
     id: 27,
-    link:'https://coco-color-by-number.vercel.app/',
+    link:'https://coco-color-game.vercel.app/',
     kindergarten_course:true,
     duration: '12 Weeks',
     course_outline:'Online + Onsite',
