@@ -5,7 +5,7 @@ import { useMouseMoveUI } from '../../contexts/mouse-move-context';
 import FooterSocial from './component/footer-social';
 
 const footer_contents = {
-    desc: 'Cảm ơn sự hỗ trợ từ Trung tâm Hướng Dương, Trung tâm can thiệp sớm An Phúc, Trung tâm Giải pháp giáo dục NewWings, Trung tâm can thiệp sớm Sơn Ca. ',
+    desc: 'Cảm ơn sự hỗ trợ từ Trung tâm Hướng Dương, Trung tâm can thiệp sớm An Phúc, Trung tâm Giải pháp giáo dục NewWings, Trung tâm can thiệp sớm Sơn Ca.',
     teacher: 'Nguyễn Võ Thanh Việt',
     advisor: 'Võ Nguyễn Đình Trí, Đỗ Hoàng Nhơn, Trần Thanh Nhân, Cao Thái Minh',
     tool:'Bing AI Image Creator, ChatGPT, Visual Studio Code, Github, Vercel'
@@ -21,11 +21,11 @@ const FooterTwo = () => {
                 <div className="container">
                     <div className="row g-5 d-flex justify-content-center">
                         <div className="edu-footer-widget">
-                            <h4 className="widget-title">Lời cảm ơn</h4>
+                            <h4 className="widget-title color-secondary">Lời cảm ơn</h4>
                             <div className="inner">
-                                <p className="description">{desc}</p>
                                 <div className="widget-information">
                                     <ul className="information-list">
+                                        <li>{desc}</li>
                                         <li><span>Giáo viên hướng dẫn:</span>{teacher}</li>
                                         <li><span>Cố vấn dự án:</span>{advisor}</li>
                                         <li><span>Công cụ:</span>{tool}</li>

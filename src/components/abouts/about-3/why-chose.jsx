@@ -32,13 +32,13 @@ const WhyChose = () => {
                     <span className="shape-line"><i className="icon-19"></i></span>
                 </div>
                 <div className="row g-5">
-                    <FeatureBox color="color-primary-style" img="11" icon="45" title="Natalie Weder"
+                    <FeatureBox color="color-primary-style" img="12" icon="45" title="Natalie Weder"
                     text="“Các trò chơi điện tử sẽ luôn thay đổi và yêu cầu người chơi phải đáp ứng lại, nếu không kịp thời phản ứng bạn sẽ thua cuộc. Do vậy những đứa trẻ mắc chứng tăng động giảm chú ý sẽ rất thích thú với những trò chơi này, bởi chúng sẽ không phải suy nghĩ sang một vấn đề khác do không có một khoảng trống thời gian nào cả”." />
 
                     <FeatureBox color="color-secondary-style" img="11" icon="46" title="Báo VnExpress"
                     text="Chơi game là một cách hữu ích giúp trẻ ADHD tập trung năng lượng và giải trí, đặc biệt là trò chơi liên quan đến trí nhớ hoặc câu đố chữ có thể cải thiện trí não, khả năng chú ý của trẻ. Đồng thời trẻ mắc ADHD có xu hướng trở nên “siêu tập trung” khi bị kích thích bởi game trong một khoảng thời gian nhất định." />
 
-                    <FeatureBox color="color-extra08-style" img="05" icon="47" title="Một bài báo của Frontier in Psychiatry"
+                    <FeatureBox color="color-extra08-style" img="13" icon="47" title="Một bài báo của Frontier in Psychiatry"
                     text="Sau khi sử dụng trò chơi điện tử trong việc can thiệp/phục hồi tâm lý thần kinh ADHD, đặc biệt là với các trò chơi trí nhớ, kết quả cho thấy sự cải thiện trong năm khả năng nhận thức: các kỹ năng ghi nhớ làm việc, các kỹ năng chú ý, các chức năng điều hành, các nhiệm vụ lý luận phức tạp, trí nhớ ngắn hạn." />
                 </div>
                 <ul className="shape-group">
