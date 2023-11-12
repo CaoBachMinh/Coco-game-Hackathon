@@ -13,7 +13,7 @@ const TeamArea = () => {
                 </div>
 
                 <div className="row g-5 d-flex justify-content-center">
-                    {instructors_data.slice(0,2).map((instructor) => (
+                    {instructors_data.slice(0,4).map((instructor) => (
                         <div key={instructor.id} className="col-lg-4 col-md-6" data-sal-delay={instructor.delay} data-sal="slide-up" data-sal-duration="800">
                             <TeamFive instructor={instructor} />
                         </div>

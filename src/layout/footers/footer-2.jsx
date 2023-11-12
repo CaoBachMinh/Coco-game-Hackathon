@@ -7,7 +7,7 @@ import FooterSocial from './component/footer-social';
 const footer_contents = {
     desc: 'Cảm ơn sự hỗ trợ từ Trung tâm Hướng Dương, Trung tâm can thiệp sớm An Phúc, Trung tâm Giải pháp giáo dục NewWings, Trung tâm can thiệp sớm Sơn Ca.',
     teacher: 'Nguyễn Võ Thanh Việt',
-    advisor: 'Võ Nguyễn Đình Trí, Đỗ Hoàng Nhơn, Trần Thanh Nhân, Cao Thái Minh',
+    advisor: 'Võ Nguyễn Đình Trí',
     tool:'Bing AI Image Creator, ChatGPT, Visual Studio Code, Github, Vercel'
 }
 
@@ -26,7 +26,6 @@ const FooterTwo = () => {
                                 <div className="widget-information">
                                     <ul className="information-list">
                                         <li>{desc}</li>
-                                        <li><span>Giáo viên hướng dẫn:</span>{teacher}</li>
                                         <li><span>Cố vấn dự án:</span>{advisor}</li>
                                         <li><span>Công cụ:</span>{tool}</li>
                                     </ul>

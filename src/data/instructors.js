@@ -33,7 +33,7 @@ const instructors_data = [
             {link: 'http://twitter.com', target: '_blank', icon: 'icon-twitter'},
             {link: 'https://www.linkedin.com/', target: '_blank', icon: 'icon-linkedin2'}
         ],
-        name:'Penelope Cruz',
+        name:'Trần Thanh Nhân',
         title:'Digital Marketer',
         delay:'150',
         sm_text:"Consectetur adipisicing elit, sed do eius mod tempor incididunt"
@@ -46,7 +46,7 @@ const instructors_data = [
             {link: 'http://twitter.com', target: '_blank', icon: 'icon-twitter'},
             {link: 'https://www.linkedin.com/', target: '_blank', icon: 'icon-linkedin2'}
         ],
-        name:'John Travolta',
+        name:'Cao Thái Minh',
         title:'Wordpress Expert',
         delay:'200',
         sm_text:"Consectetur adipisicing elit, sed do eius mod tempor incididunt"

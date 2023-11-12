@@ -20,18 +20,27 @@ const HeaderThree = () => {
                 <div id="edu-sticky-placeholder"></div>
                 <div className={`header-mainmenu ${sticky ? 'edu-sticky' : ''}`}>
                     <div className="container-fluid">
-                        <div className="header-navbar d-flex justify-content-center">
-                            <div className="header-brand">
-                                <div className="logo">
-                                    <Link href="/">
-                                        <a>
-                                            <img className="logo-light" src="/assets/images/logo/logo-dark.png" alt="Corporate Logo" />
-                                            <img className="logo-dark" src="/assets/images/logo/logo-white.png" alt="Corporate Logo" />
-                                        </a>
-                                    </Link>
+                        <div className='header-top'>
+                            <div className="header-top-left">
+                                <div className="header-brand ">
+                                    <div className="logo">
+                                        <Link href="/">
+                                            <a>
+                                                <img className="logo-light" src="/assets/images/logo/logo-dark.png" alt="Corporate Logo" />
+                                                <img className="logo-dark" src="/assets/images/logo/logo-white.png" alt="Corporate Logo" />
+                                            </a>
+                                        </Link>
+                                    </div>
                                 </div>
                             </div>
+                            <div className="header-top-right">
+                                <ul className="header-info">
+                                    <li><Link href="/sign-in"><a>Login</a></Link></li>
+                                    <li><Link href="/sign-in"><a>Register</a></Link></li>
+                                </ul>
+                            </div>
                         </div>
+
                     </div>
                 </div>
                 {/* <!-- Start Search Popup  --> */}

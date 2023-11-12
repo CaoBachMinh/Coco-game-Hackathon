@@ -9,8 +9,12 @@ const menu_data = [
         ]
     },
     {
-        title: 'Liên hệ',
-        link: '/contact-us',
+        title: 'Tầm soát sức khỏe tinh thần',
+        link: '#',
+    },
+    {
+        title: 'Tìm hiểu về ADHD',
+        link: '#',
     }
 ]
 

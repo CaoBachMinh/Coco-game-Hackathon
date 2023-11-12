@@ -43,7 +43,7 @@ const HeaderTwo = ({ style_3, no_topBar = false }) => {
 
                 <div id="edu-sticky-placeholder"></div>
 
-                <div className={`header-mainmenu ${sticky ? 'edu-sticky' : ''}`}>
+                {/* <div className={`header-mainmenu ${sticky ? 'edu-sticky' : ''}`}>
                     <div className="container">
                         <div className="header-navbar">
                             <div className="header-brand">
@@ -105,7 +105,7 @@ const HeaderTwo = ({ style_3, no_topBar = false }) => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
         
                 {/* <!-- Start Search Popup  --> */}
                 <SearchPopup isSearchOpen={isSearchOpen} setIsSearchOpen={setIsSearchOpen} />
