@@ -10,7 +10,7 @@ const MainMenu = () => {
                     <li key={i} className="has-droupdown">
                         <a href="#">{menu.title}</a>
 
-                        {!menu.mega_menu &&
+                        {!menu.mega_menu && menu.check_drop != false &&
                             <ul className="submenu">
                                 {menu.submenus?.map((nav, j) => (
                                     <li key={j}>
@@ -26,7 +26,7 @@ const MainMenu = () => {
                             </ul>
                         }
 
-                        {menu.mega_menu &&
+                        {menu.mega_menu  &&
                             <ul className="mega-menu">
                                 {menu.submenus?.map((nav, j) => (
                                     <li key={j}>

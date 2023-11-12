@@ -9,11 +9,11 @@
         position: relative;
         @media #{$smlg-device} {
             padding-top: 10px;
-            padding-bottom: 10px;
+            padding-bottom: 5px;
         }
         @media #{$sm-layout} {
             padding-top: 12px;
-            padding-bottom: 12px;
+            padding-bottom: 5px;
         }
         // z-index: 99; required, conflict issue with z-10 class 
         &.edu-sticky {
@@ -52,7 +52,7 @@
             }
         }
         .logo {
-            margin-left: 20%;
+            margin-left: 30%;
             margin-right: 40px;
             @media #{$large-mobile} {
                 margin-right: 15px;
@@ -76,7 +76,7 @@
                         padding: 0 40px;
                         i {
                             padding-right: 10px;
-                            font-size: 18px;
+                            font-size: 15px;
                             position: relative;
                             top: 2px;
                         }
@@ -137,7 +137,7 @@
             li {
                 @media #{$lg-layout} {
                     padding: 14px 15px 12px;
-                    font-size: 13px;
+                    font-size: 10px;
                 }
                 @media #{$sm-layout} {
                    padding: 10px; 
@@ -239,7 +239,7 @@
                 color: var(--color-heading);
                 font-weight: 500;
                 &:after {
-                    background-color: #e0ddd7;
+                    background-color: #000000;
                     height: 30px;
                     display: none;
                 }

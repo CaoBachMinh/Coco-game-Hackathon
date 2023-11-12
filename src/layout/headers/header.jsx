@@ -56,11 +56,18 @@ const Header = ({ header_style, no_top_bar, disable_full_width, disable_category
                                     {/* main menu end */}
                                 </nav>
                             </div>
-                            <div className="header-right">
-                                <ul className="header-action">
-                                                               
+
+                            <div className='header-top'>
+                                <ul className="header-info">
+                                    <li><Link href="/sign-in"><a>Đăng nhập</a></Link></li>
+                                    <li><Link href="/sign-in"><a>Đăng kí</a></Link></li>
                                 </ul>
                             </div>
+
+                            {/* <div className="header-right">
+                                
+                            </div> */}
+
                         </div>
                     </div>
                 </div>

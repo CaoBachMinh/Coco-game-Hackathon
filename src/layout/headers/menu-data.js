@@ -11,10 +11,13 @@ const menu_data = [
     {
         title: 'Tầm soát sức khỏe tinh thần',
         link: '#',
+        mega_menu : false,
+        check_drop : false,
     },
     {
         title: 'Tìm hiểu về ADHD',
         link: '#',
+        check_drop : false,
     }
 ]
 
