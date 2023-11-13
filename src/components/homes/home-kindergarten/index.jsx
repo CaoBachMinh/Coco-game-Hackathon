@@ -19,7 +19,6 @@ const index = () => {
                 <Treatment/>
                 <Choses/>
                 <CoursesArea/>
-                
                 <TeamArea/>
                 <FooterTwo />
             </div>

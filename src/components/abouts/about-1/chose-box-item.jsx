@@ -1,4 +1,4 @@
-export default function ChoseBox ({color,icon,title,subtitle}) {
+export default function ChoseBox ({color,icon,title,subtitle, span}) {
     return (
         <div className="col-lg-4" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
             <div className={`why-choose-box features-box ${color}`}>
@@ -7,6 +7,7 @@ export default function ChoseBox ({color,icon,title,subtitle}) {
                 </div>
                 <div className="content">
                     <h4 className="title">{title}</h4>
+                    <h4 color="red">{span}</h4>
                     <p>{subtitle}</p>
                 </div>
             </div>

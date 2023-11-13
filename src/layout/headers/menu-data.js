@@ -1,23 +1,30 @@
 const menu_data = [
     {
+        title: 'Phương pháp Gamification',
+        link: '#',
+        check_drop : false,
+    },
+    {
         title: 'Về ADHD',
         link: '#',
         mega_menu: false,
         submenus: [
-            { title: 'Nguyên nhân', link: '/', hot: true },
-            { title: 'Lộ trình điều trị', link: '/' },
+            {title: 'ADHD là gì', link: '/'},
+            { title: 'Nguyên nhân', link: '/'},
+            { title: 'Các phương pháp điều trị', link: '/' },
         ]
     },
     {
-        title: 'Tầm soát sức khỏe tinh thần',
+        title: 'Kiểm tra sức khỏe tinh thần',
         link: '#',
         mega_menu : false,
         check_drop : false,
     },
+    
     {
-        title: 'Tìm hiểu về ADHD',
-        link: '#',
-        check_drop : false,
+        title: 'Về chúng tôi',
+        link: '/team-details/index',
+        check_drop: false,
     }
 ]
 
