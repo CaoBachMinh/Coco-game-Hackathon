@@ -7,15 +7,16 @@ import AboutArea from './about-area';
 import BrandArea from './brand-area';
 import CounterArea from './counter-area';
 import WhyChose from './why-chose';
-
+import Choses from '../about-2/counter-area';
 
 const index = () => {
     return (
         <div className='sticky-header'>
             <div id="main-wrapper" className="main-wrapper">
                 <Header no_top_bar={true} />
+               
                 <AboutArea/>
-                <BrandArea/>
+                <Choses></Choses>
                 <WhyChose/>
                 {/* <Testimonial/> */}
                 <CounterArea/>

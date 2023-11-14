@@ -12,7 +12,7 @@ const BreadcrumbThree = ({ title, subtitle }) => {
                     <div className="page-title">
                         <h1 className="title">{title}</h1>
                     </div>
-                    <ul className="edu-breadcrumb">
+                    {/* <ul className="edu-breadcrumb">
                         <li className="breadcrumb-item">
                             <Link href="/">
                             <a>Home</a>
@@ -22,7 +22,7 @@ const BreadcrumbThree = ({ title, subtitle }) => {
                         <li className="breadcrumb-item"><a href="#">Pages</a></li>
                         <li className="separator"><i className="icon-angle-right"></i></li>
                         <li className="breadcrumb-item active" aria-current="page">{subtitle}</li>
-                    </ul>
+                    </ul> */}
                 </div>
             </div>
             <ul className="shape-group">

@@ -1,5 +1,4 @@
 import React from 'react';
-// import CounterBox from '../../homes/home/counter-box';
 import { motion } from 'framer-motion';
 import { useMouseMoveUI } from '../../../contexts/mouse-move-context';
 
@@ -21,7 +20,6 @@ const CounterArea = () => {
                     </div>
                     <div className="col-lg-7">
                         <div className="counterup-box-wrap">
-                            {/* <CounterBox /> */}
                             <ul className="shape-group">
                                 <motion.li className="shape-1 scene"
                                     animate={ {

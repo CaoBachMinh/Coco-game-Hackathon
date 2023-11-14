@@ -9,7 +9,7 @@ const menu_data = [
     },
     {
         title: 'Về ADHD',
-        link: '#',
+        link: 'about-1',
         mega_menu: false,
         submenus: [
             {title: 'ADHD là gì', link: 'about-1'},
