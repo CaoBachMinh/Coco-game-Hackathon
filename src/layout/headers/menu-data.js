@@ -2,14 +2,17 @@ const menu_data = [
     {
         title: 'Phương pháp Gamification',
         link: '#',
-        check_drop : false,
+        check_drop : true,
+        submenus:[
+            {title: 'Gamification là gì', link: '/'},
+        ]
     },
     {
         title: 'Về ADHD',
         link: '#',
         mega_menu: false,
         submenus: [
-            {title: 'ADHD là gì', link: '/'},
+            {title: 'ADHD là gì', link: 'about-1'},
             { title: 'Nguyên nhân', link: '/'},
             { title: 'Các phương pháp điều trị', link: '/' },
         ]
@@ -23,7 +26,7 @@ const menu_data = [
     
     {
         title: 'Về chúng tôi',
-        link: '/team-details/index',
+        link: "/team-1",
         check_drop: false,
     }
 ]

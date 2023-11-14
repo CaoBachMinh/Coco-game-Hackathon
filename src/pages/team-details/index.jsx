@@ -2,7 +2,6 @@ import SEO from '../../components/seo';
 import { Wrapper } from '../../layout';
 import TeamDetailMain from '../../components/teams/team-details';
 import { instructors_data } from '../../data';
-import Link from 'next/link';
 const team = instructors_data[0]
 
 const TeamDetail = () => {

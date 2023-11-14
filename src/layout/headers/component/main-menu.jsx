@@ -8,8 +8,12 @@ const MainMenu = () => {
             {menu_data.map((menu, i) => {
                 return (
                     <li key={i} className="has-droupdown">
-                        <a href="#">{menu.title}</a>
 
+                        <Link href={`${menu.link}`}>
+                            <a>
+                                {menu.title}
+                            </a>
+                        </Link>
                         {!menu.mega_menu && menu.check_drop != false &&
                             <ul className="submenu">
                                 {menu.submenus?.map((nav, j) => (
@@ -26,24 +30,7 @@ const MainMenu = () => {
                             </ul>
                         }
 
-                        {menu.mega_menu  &&
-                            <ul className="mega-menu">
-                                {menu.submenus?.map((nav, j) => (
-                                    <li key={j}>
-                                        <h6 className="menu-title">{nav.title}</h6>
-                                        <ul className="submenu mega-sub-menu-01">
-                                            {nav.mega_submenu?.map((m, k) => (
-                                                <li key={k}>
-                                                    <Link href={`${m.link}`}>
-                                                        <a>{m.title}</a>
-                                                    </Link>
-                                                </li>
-                                            )) ?? []}
-                                        </ul>
-                                    </li>
-                                )) ?? []}
-                            </ul>
-                        }
+
                     </li>
                 )
             })}
