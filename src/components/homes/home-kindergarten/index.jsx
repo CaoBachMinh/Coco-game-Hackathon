@@ -8,8 +8,7 @@ import Treatment from '../../abouts/about-1/why-chose';
 import Choses from '../../abouts/about-3/why-chose';
 import About_ADHD from '../../abouts/about-1/about-area';
 import TeamArea from '../../teams/team-2/team-area';
-
-
+import CounterArea from './counter-area';
 const index = () => {
     return (
         <div className='sticky-header'>
@@ -18,6 +17,7 @@ const index = () => {
                 <Header/>
                 <HeroArea/>
                 <AboutArea/>
+                <CounterArea/>
                 <About_ADHD/>
                 <Treatment/>
                 <Choses/>

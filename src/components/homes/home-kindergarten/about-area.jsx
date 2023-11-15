@@ -36,9 +36,9 @@ const AboutArea = () => {
                         <div className="about-content">
                             <div className="section-title section-left" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
                                 <span className="pre-title pre-textsecondary">Chào mừng bạn đến với CoCoGame</span>
-                                <h2 className="title">Cải thiện ADHD với phương pháp Gamification!</h2>
+                                <h2 className="title">Cải thiện <span className='color-secondary'>ADHD</span> với phương pháp Gamification!</h2>
                                 <span className="shape-line"><i className="icon-19"></i></span>
-                                <p>CoCoGame là dự án mang đến các trò chơi trải nghiệm Gamification cho các bạn nhỏ trong quá trình điều trị ADHD nhằm tạo ra môi trường số có phương pháp cải thiện, đo lường và hỗ trợ phụ huynh, nhà trường và bản thân các em nhỏ. ADHD (Attention-Deficit/Hyperactivity Disorder) là một chứng rối loạn sức khỏe tâm thần phổ biến ở trẻ em và thanh thiếu niên, gây ra các vấn đề về chú ý và hiếu động. ADHD có thể ảnh hưởng đến khả năng học tập, giao tiếp và tương tác xã hội của các em.</p>
+                                <p>CoCo Game là dự án mang đến các trò chơi trải nghiệm Gamification cho các bạn nhỏ trong quá trình điều trị ADHD nhằm tạo ra môi trường số có phương pháp cải thiện, đo lường và hỗ trợ phụ huynh, nhà trường và bản thân các em nhỏ.</p>
                             </div>
                             <div className="about-mission" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
                                 <div className="row g-5 row--20">
