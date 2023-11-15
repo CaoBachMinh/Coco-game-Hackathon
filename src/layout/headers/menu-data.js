@@ -20,7 +20,7 @@ const menu_data = [
     },
     {
         title: 'Kiểm tra sức khỏe tinh thần',
-        link: '#',
+        link: '/quiz',
         mega_menu : false,
         check_drop : false,
     },
