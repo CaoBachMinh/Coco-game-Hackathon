@@ -7,14 +7,13 @@ const TeamArea = () => {
         <div className="edu-team-area team-area-6 edu-section-gap">
             <div className="container">
                 <div className="section-title section-center" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-                    <span className="pre-title color-secondary">COCO TEAM</span>
                     <h2 className="title">Thành viên dự án</h2>
                     <span className="shape-line"><i className="icon-19"></i></span>
                 </div>
 
                 <div className="row g-5 d-flex justify-content-center">
                     {instructors_data.slice(0,4).map((instructor) => (
-                        <div key={instructor.id} className="col-lg-4 col-md-6" data-sal-delay={instructor.delay} data-sal="slide-up" data-sal-duration="800">
+                        <div key={instructor.id} className="col-lg-3 col-md-6" data-sal-delay={instructor.delay} data-sal="slide-up" data-sal-duration="800">
                             <TeamFive instructor={instructor} />
                         </div>
                     ))}

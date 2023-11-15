@@ -15,7 +15,7 @@ const TeamArea = () => {
                 <div className="row g-5">
                     {instructors_data.slice(0,4).map((instructor) => {
                         return (
-                            <div key={instructor.id} className="col-lg-4 col-md-6" data-sal-delay="100" data-sal="slide-up" data-sal-duration="800">
+                            <div key={instructor.id} className="col-lg-3 col-md-6" data-sal-delay="100" data-sal="slide-up" data-sal-duration="800">
                                 <TeamTwo instructor={instructor} />
                             </div>
                         )

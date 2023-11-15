@@ -4,9 +4,14 @@ import { useMouseMoveUI } from '../../contexts/mouse-move-context';
 import Link from 'next/link';
 
 const lists = [
-    'Giảm chú ý',
-    'Tăng động/Bốc đồng',
-    'Tế bào hỗn hợp',
+    'Phát hiện sớm tình trạng bệnh ADHD',
+    'Chuẩn đoán và tầm soát vấn đề sức khỏe',
+    'Nâng cao kiến thức về sức khỏe tinh thần của bản thân và gia đình',
+];
+
+const factor = [
+    'Trả lời trung thực và chính xác',
+    'Các triệu chứng trả lời xuất hiện trong 6 ngày gần nhất',
 ];
 
 const AboutQuiz = () => {
@@ -68,7 +73,30 @@ const AboutQuiz = () => {
                         </div>
                     </div>
                 </div>
+                
+                <div className="col-lg-8" style={{marginTop: '80px', left: '20%' }} >
+                    <div className='about-content'>
+                        <div className='section-title' data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
+                            <h3 className='title'>Trả lời các câu hỏi sàng lọc bệnh tim mạch sau đây, bạn có thể:</h3>
+                            <ul className="features-list" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
+                                {lists.map((l, i) => <li key={i}>{l}</li>)}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="col-lg-8" style={{marginTop: '50px', left: '20%' }} >
+                    <div className='about-content'>
+                        <div className='section-title' data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
+                            <h3 className='title'>Khi thực hiện các câu hỏi, bạn cần <span className='color-secondary'>đảm bảo</span> các yếu tố sau:</h3>
+                            <ul className="features-list" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
+                                {factor.map((l, i) => <li key={i}>{l}</li>)}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
+
             <ul className="shape-group">
                 <li className="shape-1" data-sal-delay="500" data-sal="fade" data-sal-duration="200"></li>
             </ul>

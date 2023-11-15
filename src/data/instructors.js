@@ -8,7 +8,7 @@ const instructors_data = [
             {link: 'https://www.linkedin.com/', target: '_blank', icon: 'icon-linkedin2'}
         ],
         name:'Nguyễn Khánh Ngân',
-        title:'Lớp 11D1 Trường THPT chuyên Lê Quý Đôn, Đà Nẵng',
+        title:'',
         delay:'50',
         sm_text:"Consectetur adipisicing elit, sed do eius mod tempor incididunt"
     },
@@ -21,7 +21,7 @@ const instructors_data = [
             {link: 'https://www.linkedin.com/', target: '_blank', icon: 'icon-linkedin2'}
         ],
         name:'Nguyễn Đỗ Thiện Nhân',
-        title:'Lớp 11D1 Trường THPT chuyên Lê Quý Đôn, Đà Nẵng',
+        title:'',
         delay:'100',
         sm_text:"Consectetur adipisicing elit, sed do eius mod tempor incididunt"
     },
@@ -34,7 +34,7 @@ const instructors_data = [
             {link: 'https://www.linkedin.com/', target: '_blank', icon: 'icon-linkedin2'}
         ],
         name:'Trần Thanh Nhân',
-        title:'Digital Marketer',
+        title:'Leader',
         delay:'150',
         sm_text:"Consectetur adipisicing elit, sed do eius mod tempor incididunt"
     },
@@ -47,7 +47,7 @@ const instructors_data = [
             {link: 'https://www.linkedin.com/', target: '_blank', icon: 'icon-linkedin2'}
         ],
         name:'Cao Thái Minh',
-        title:'Wordpress Expert',
+        title:'Developer',
         delay:'200',
         sm_text:"Consectetur adipisicing elit, sed do eius mod tempor incididunt"
     },
