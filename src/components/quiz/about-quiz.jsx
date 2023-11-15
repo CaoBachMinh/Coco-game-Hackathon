@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useMouseMoveUI } from '../../contexts/mouse-move-context';
+import Link from 'next/link';
 
 const lists = [
     'Giảm chú ý',
@@ -22,14 +23,13 @@ const AboutQuiz = () => {
                                 <span className="shape-line"><i className="icon-19"></i></span>
                                 <p>Tham vấn y khoa: DSM - Diagnostics Statistical Manual of Mental Disorders (Hiệp hội Chuyên gia Tâm thần Hoa Kỳ)</p>
                             </div>
-                            {/* <ul className="features-list" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-                                {lists.map((l,i) => <li key={i}>{l}</li>)}
-                            </ul> */}
 
                             <div className="banner-btn" data-sal-delay="400" data-sal="slide-up" data-sal-duration="1000">
-                                <button className="edu-btn btn-curved">
-                                    <a>Bắt đầu ngay <i className="icon-4"></i></a>
-                                </button>
+                                <Link href="https://quiz-sigma-sand.vercel.app/">
+                                    <a className="edu-btn btn-curved">
+                                        Bắt đầu ngay <i className="icon-4"></i>
+                                    </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
