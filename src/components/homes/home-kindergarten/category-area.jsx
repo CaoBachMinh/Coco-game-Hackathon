@@ -21,22 +21,22 @@ const CategoryArea = () => {
         <div className="features-area-4">
             <div className="container">
                 <div className="section-title section-center" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-                    <span className="pre-title pre-textsecondary">Our Activities</span>
-                    <h2 className="title">Will Be Happy With Our Activities</h2>
+                    <span className="pre-title pre-textsecondary">Triệu chứng</span>
+                    <h2 className="title">Các triệu chứng thường gặp ở ADHD</h2>
                     <span className="shape-line"><i className="icon-19"></i></span>
                 </div>
                 <div className="row">
-                    <FeatureBox delay="50" color="color-primary-style" icon="84" title="Summer Camp" 
+                    <FeatureBox delay="50" color="color-primary-style" icon="84" title="Thiếu tập trung" 
                     text="Magna aliquaenim minim veniam nostrud exercit ation ullamco laboris." />
-                    <FeatureBox delay="100" color="color-secondary-style" icon="85" title="Museum Visit" 
+                    <FeatureBox delay="100" color="color-secondary-style" icon="85" title="Thiếu sự cẩn thận" 
                     text="Magna aliquaenim minim veniam nostrud exercit ation ullamco laboris." />
-                    <FeatureBox delay="150" color="color-extra02-style" icon="86" title="Sports Training" 
+                    <FeatureBox delay="150" color="color-extra02-style" icon="86" title="Thường có hành động nguy hiểm" 
                     text="Magna aliquaenim minim veniam nostrud exercit ation ullamco laboris." />
-                    <FeatureBox delay="50" color="color-extra03-style" icon="87" title="Music Club" 
+                    <FeatureBox delay="50" color="color-extra03-style" icon="87" title="Gặp khó khăn khi làm việc một mình" 
                     text="Magna aliquaenim minim veniam nostrud exercit ation ullamco laboris." />
-                    <FeatureBox delay="100" color="color-extra04-style" icon="88" title="Math Club" 
+                    <FeatureBox delay="100" color="color-extra04-style" icon="88" title="Khó khăn trong kiểm soát lời nói" 
                     text="Magna aliquaenim minim veniam nostrud exercit ation ullamco laboris." />
-                    <FeatureBox delay="150" color="color-extra05-style" icon="89" title="Clear & Cleaning" 
+                    <FeatureBox delay="150" color="color-extra05-style" icon="89" title="Dễ quên và khó ghi nhớ" 
                     text="Magna aliquaenim minim veniam nostrud exercit ation ullamco laboris." />
                 </div>
             </div>

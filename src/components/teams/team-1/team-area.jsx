@@ -7,8 +7,8 @@ const TeamArea = () => {
         <div className="edu-team-area team-area-2 edu-section-gap">
             <div className="container">
                 <div className="section-title section-center" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-                    <span className="pre-title">Instructors</span>
-                    <h2 className="title">Course Instructors</h2>
+                    <span className="pre-title pre-textsecondary">CoCo Game</span>
+                    <h2 className="title">Những thành viên trong dự án</h2>
                     <span className="shape-line"><i className="icon-19"></i></span>
                 </div>
 

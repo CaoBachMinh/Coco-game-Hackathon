@@ -13,6 +13,7 @@ const menu_data = [
         mega_menu: false,
         submenus: [
             {title: 'ADHD là gì', link: 'about-1'},
+            {title: 'Các triệu chứng', link: '/'},
             { title: 'Nguyên nhân', link: '/'},
             { title: 'Các phương pháp điều trị', link: '/' },
         ]

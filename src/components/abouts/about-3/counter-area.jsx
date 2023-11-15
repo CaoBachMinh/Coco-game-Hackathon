@@ -36,14 +36,18 @@ const counter_data = [
     }
 ]
 
-const CounterArea = ({about_p_3}) => {
+const CounterArea = ({ about_p_3 }) => {
     const { mouseDirection, mouseReverse } = useMouseMoveUI();
     return (
         <div className="counterup-area-9">
             <div className="container edublink-animated-shape">
+                <div className="section-title section-center" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
+                    <h2 className="title">Những con số về <span className="color-secondary">ADHD</span> </h2>
+                    <span className="shape-line"><i className="icon-19"></i></span>
+                </div>
                 <div className="row g-5">
                     {counter_data.map((c, i) => {
-                        const { color, count, text, title,icon } = c;
+                        const { color, count, text, title, icon } = c;
                         return (
                             <div key={i} className="col-lg-3 col-sm-6" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
                                 <div className="edu-counterup counterup-style-4">
@@ -64,10 +68,10 @@ const CounterArea = ({about_p_3}) => {
 
                 <ul className="shape-group">
                     <motion.li className="shape-1 scene" data-sal-delay="500" data-sal="fade" data-sal-duration="200"
-                        animate={ {
+                        animate={{
                             x: mouseDirection(40).x,
                             y: mouseDirection(40).y
-                        } }
+                        }}
                     >
                         <img src="/assets/images/others/shape-27.png" alt="Shape" />
                     </motion.li>

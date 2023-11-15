@@ -5,19 +5,20 @@ import Breadcrumb from '../../breadcrumb/breadcrumb';
 // import TeamArea from '../../homes/home-online-academy/team-area';
 import AboutArea from './about-area';
 import BrandArea from './brand-area';
-import CounterArea from './counter-area';
+import CounterArea from '../about-3/counter-area';
 import WhyChose from './why-chose';
-import Choses from '../about-2/counter-area';
+import Choses from '../../homes/home-kindergarten/category-area';
+import About_ADHD from './about-ADHD';
 
 const index = () => {
     return (
         <div className='sticky-header'>
             <div id="main-wrapper" className="main-wrapper">
                 <Header no_top_bar={true} />
-               
                 <AboutArea/>
                 <Choses></Choses>
                 <WhyChose/>
+                <About_ADHD/>
                 {/* <Testimonial/> */}
                 <CounterArea/>
                 {/* <TeamArea about_p={true} /> */}
