@@ -32,28 +32,31 @@ const CounterArea = ({ about_p_3 }) => {
                     <h2 className="title"><span className='color-secondary'>Tầm nhìn</span> và <span className='color-secondary'>sứ mệnh</span></h2>
 
                     <span className="shape-line"><i className="icon-19"></i></span>
-                    {counter_data.map((c, i) => {
-                        const { color, count, text, title, icon } = c;
-                        return (
-                            <div key={i} className="col-lg-4 col-sm-6" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-                                <div className="edu-counterup counterup-style-1" >
-                                    {/* <div className={`icon ${color}`}>
+                    <div style={{ display: 'flex', justifyContent: 'center' }}>
+                        {counter_data.map((c, i) => {
+                            const { color, count, text, title, icon } = c;
+                            return (
+                                <div key={i} className="col-lg-4 col-sm-6" style={{marginRight: '50px'}} data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
+                                    <div className="edu-counterup counterup-style-1" style={{ padding:'30 29px'}} >
+                                        {/* <div className={`icon ${color}`}>
                                         <i className={`icon-${icon}`}></i>
                                     </div> */}
-                                    {/* <h2 className="counter-item count-number">
+                                        {/* <h2 className="counter-item count-number">
                                         <span className="odometer">
                                             <Counter number={parseFloat(count)} text={text} decimal={c.decimal} />
                                         </span>
                                     </h2> */}
-                                    <h1 className="title" style={{ textTransform: 'none', color: color, fontWeight: 700, fontSize: '32px', marginBottom: '10px' }}>
-                                        {title}
-                                    </h1>
-                                    <p>{text}</p>
-                                    
+                                        <h1 className="title" style={{ textTransform: 'none', color: color, fontWeight: 700, fontSize: '32px', marginBottom: '10px' }}>
+                                            {title}
+                                        </h1>
+                                        <p>{text}</p>
+
+                                    </div>
                                 </div>
-                            </div>
-                        )
-                    })}
+                            )
+                        })}
+                    </div>
+
                 </div>
 
                 <ul className="shape-group">

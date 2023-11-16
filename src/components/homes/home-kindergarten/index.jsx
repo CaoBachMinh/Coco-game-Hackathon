@@ -6,9 +6,11 @@ import HeroArea from './hero-area';
 import BrandArea from '../../abouts/about-1/brand-area';
 import Treatment from '../../abouts/about-1/why-chose';
 import Choses from '../../abouts/about-3/why-chose';
-import About_ADHD from '../../abouts/about-1/about-area';
 import TeamArea from '../../teams/team-2/team-area';
 import CounterArea from './counter-area';
+import About_ADHD from './about-ADHD';
+import About_gami from './about-gami';
+
 const index = () => {
     return (
         <div className='sticky-header'>
@@ -17,11 +19,13 @@ const index = () => {
                 <Header/>
                 <HeroArea/>
                 <AboutArea/>
+                <About_gami/>
+                <Choses/>
+                <CoursesArea/>
                 <CounterArea/>
                 <About_ADHD/>
                 <Treatment/>
-                <Choses/>
-                <CoursesArea/>
+                {/* <Choses/> */}
                 <TeamArea/>
                 <FooterTwo />
             </div>

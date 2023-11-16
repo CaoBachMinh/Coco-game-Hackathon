@@ -11,7 +11,7 @@ const lists = [
 const AboutArea = () => {
     const { mouseDirection, mouseReverse } = useMouseMoveUI();
     return (
-        <div className="section-gap-large edu-about-area about-style-7">
+        <div className="section-gap-small edu-about-area about-style-7">
             <div className="container">
                 <div className="row g-5 align-items-center">
                     <div className="col-lg-5">

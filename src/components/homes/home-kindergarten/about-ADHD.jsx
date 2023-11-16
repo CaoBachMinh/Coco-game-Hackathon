@@ -3,7 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useMouseMoveUI } from '../../../contexts/mouse-move-context';
 
-const AboutArea = () => {
+const About_ADHD = () => {
     const { mouseDirection, mouseReverse } = useMouseMoveUI();
     return (
         <div className="edu-about-area about-style-6">
@@ -12,7 +12,7 @@ const AboutArea = () => {
                     <div className="col-lg-6">
                         <div className="about-image-gallery">
                             <div className="main-img-1">
-                                <img src="/assets/images/about/about-09.png" alt="About Image" />
+                                <img src="/assets/images/iStock-1090990634.jpg" alt="About Image" />
                             </div>
                             <ul className="shape-group">
                                 <li className="shape-1">
@@ -35,21 +35,21 @@ const AboutArea = () => {
                     <div className="col-lg-6">
                         <div className="about-content">
                             <div className="section-title section-left" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-                                <span className="pre-title pre-textsecondary">Chào mừng bạn đến với CoCoGame</span>
-                                <h2 className="title">Cải thiện <span className='color-secondary'>ADHD</span> với phương pháp Gamification!</h2>
-                                <span className="shape-line"><i className="icon-19"></i></span>
-                                <p>CoCo Game là dự án mang đến các trò chơi trải nghiệm Gamification cho các bạn nhỏ trong quá trình điều trị ADHD nhằm tạo ra môi trường số có phương pháp cải thiện, đo lường và hỗ trợ phụ huynh, nhà trường và bản thân các em nhỏ.</p>
+                                <span className="pre-title pre-textsecondary">Bạn có biết rằng</span>
+                                <h2 className="title">Trong số 24.776.733 trẻ em ở Việt Nam, thì có đến:</h2>
+                                {/* <span className="shape-line"><i className="icon-19"></i></span> */}
+                                {/* <h5></h5> */}
                             </div>
-                            <div className="about-mission" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
+                            <div className="about-mission" style={{marginTop: '30px'}} data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
                                 <div className="row g-5 row--20">
                                     {/* <div className="col-lg-6">
-                                        <h5 className="title">Tầm nhìn của dự án</h5>
-                                        <p>Tạo ra một thế giới nơi tất cả trẻ em mắc ADHD có cơ hội phát huy hết tiềm năng của mình thông qua sức mạnh của gamification.</p>
-                                    </div>
-                                    <div className="col-lg-6">
-                                        <h5 className="title">Sứ mệnh của dự án</h5>
-                                        <p>Phát triển và cung cấp các giải pháp gamification sáng tạo giúp trẻ em mắc ADHD học tập, phát triển và thành công.</p>
+                                        <h1 className="title">67%</h1>
+                                        <p>Trẻ em mắc chứng rối loạn tăng động giảm chú ý suy giảm chức năng xã hội ở tuổi trưởng thành</p>
                                     </div> */}
+                                    <div className="col-lg-6">
+                                        <h1 className="title">9%</h1>
+                                        <p>Số trẻ em tại Việt Nam đang mắc hội chứng tăng động giảm chú ý</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -60,4 +60,4 @@ const AboutArea = () => {
     )
 }
 
-export default AboutArea;
+export default About_ADHD;
