@@ -83,7 +83,7 @@ const AboutQuiz = () => {
                 <div className="col-lg-8" style={{marginTop: '80px', left: '20%' }} >
                     <div className='about-content'>
                         <div className='section-title' data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-                            <h3 className='title'>Trả lời các câu hỏi sàng lọc bệnh tim mạch sau đây, bạn có thể:</h3>
+                            <h3 className='title'>Trả lời các câu hỏi sàng lọc ADHD sau đây, bạn có thể:</h3>
                             <ul className="features-list" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
                                 {lists.map((l, i) => <li key={i}>{l}</li>)}
                             </ul>
