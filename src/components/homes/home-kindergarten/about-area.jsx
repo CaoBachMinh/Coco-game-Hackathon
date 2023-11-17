@@ -6,7 +6,7 @@ import { useMouseMoveUI } from '../../../contexts/mouse-move-context';
 const AboutArea = () => {
     const { mouseDirection, mouseReverse } = useMouseMoveUI();
     return (
-        <div className="edu-about-area about-style-6">
+        <div className="edu-about-area about-style-6" id='courses-area'>
             <div className="container">
                 <div className="row g-5 align-items-center">
                     <div className="col-lg-6">

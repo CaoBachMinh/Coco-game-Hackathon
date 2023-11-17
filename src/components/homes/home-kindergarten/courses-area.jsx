@@ -9,7 +9,7 @@ const courses = course_data.filter(course => course.kindergarten_course)
 const CoursesArea = () => {
     const { mouseDirection, mouseReverse } = useMouseMoveUI();
     return (
-        <div className="edu-course-area course-area-7" id='courses-area'>
+        <div className="edu-course-area course-area-7" >
             <div className="container edublink-animated-shape">
                 <div className="section-title section-center" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
                     <span className="pre-title pre-textsecondary">Trò chơi phổ biến</span>

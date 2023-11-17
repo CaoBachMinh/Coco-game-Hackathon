@@ -24,8 +24,7 @@ const index = () => {
                 <CoursesArea/>
                 <CounterArea/>
                 <About_ADHD/>
-                <Treatment/>
-                {/* <Choses/> */}
+                {/* <Treatment/> */}
                 <TeamArea/>
                 <FooterTwo />
             </div>
