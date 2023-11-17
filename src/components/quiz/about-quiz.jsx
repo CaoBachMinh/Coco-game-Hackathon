@@ -26,7 +26,7 @@ const AboutQuiz = () => {
                                 <span className="pre-title">Bộ câu hỏi tầm soát</span>
                                 <h2 className="title"> <span className="color-secondary">ADHD: </span> tầm soát ngay trước khi quá muộn.</h2>
                                 <span className="shape-line"><i className="icon-19"></i></span>
-                                <p>Tham vấn y khoa: DSM - Diagnostics Statistical Manual of Mental Disorders (Hiệp hội Chuyên gia Tâm thần Hoa Kỳ)</p>
+                                <p>Tham vấn y khoa: DSM - Diagnostics Statistical Manual of Mental Disorders (Hiệp hội Chuyên gia Tâm thần Hoa Kỳ)<br/>Chú ý: Trắc nghiệm này chỉ có ý nghĩa tham khảo. Bạn nêu đến thăm khám các bác sĩ chuyên khoa để có được kết quả chính xác</p>
                             </div>
 
                             <div className="banner-btn" data-sal-delay="400" data-sal="slide-up" data-sal-duration="1000">

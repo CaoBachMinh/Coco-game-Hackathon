@@ -29,7 +29,7 @@ const CounterArea = ({ about_p_3 }) => {
         <div className="counterup-area-1" style={{ marginTop: '40px' }}>
             <div className="container edublink-animated-shape">
                 <div className="row g-5 section-title section-center" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-                    <h2 className="title"><span className='color-secondary'>Tầm nhìn</span> và <span className='color-secondary'>sứ mệnh</span></h2>
+                    <h2 className="title"><span className='color-secondary'>Tầm nhìn</span> và <span className='color-secondary'>sứ mệnh</span> của dự án</h2>
 
                     <span className="shape-line"><i className="icon-19"></i></span>
                     <div style={{ display: 'flex', justifyContent: 'center' }}>

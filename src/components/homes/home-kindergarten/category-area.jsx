@@ -27,17 +27,17 @@ const CategoryArea = () => {
                 </div>
                 <div className="row">
                     <FeatureBox delay="50" color="color-primary-style" icon="84" title="Thiếu tập trung" 
-                    text="Magna aliquaenim minim veniam nostrud exercit ation ullamco laboris." />
+                    text="Trẻ mắc ADHD thường gặp khó khăn khi cố gắng tập trung trong cuộc sống" />
                     <FeatureBox delay="100" color="color-secondary-style" icon="85" title="Thiếu sự cẩn thận" 
                     text="Magna aliquaenim minim veniam nostrud exercit ation ullamco laboris." />
                     <FeatureBox delay="150" color="color-extra02-style" icon="86" title="Thường có hành động nguy hiểm" 
-                    text="Magna aliquaenim minim veniam nostrud exercit ation ullamco laboris." />
+                    text="Trẻ có xu hướng thực hiện các hành động nguy hiểm, gây hại đến sức khỏe bản thân và người khác" />
                     <FeatureBox delay="50" color="color-extra03-style" icon="87" title="Gặp khó khăn khi làm việc một mình" 
-                    text="Magna aliquaenim minim veniam nostrud exercit ation ullamco laboris." />
+                    text="Trẻ gặp khó khăn,bối rối khi thực hiện các công việc mà không có sự hướng dẫn." />
                     <FeatureBox delay="100" color="color-extra04-style" icon="88" title="Khó khăn trong kiểm soát lời nói" 
-                    text="Magna aliquaenim minim veniam nostrud exercit ation ullamco laboris." />
+                    text="Trẻ gặp khó khăn khi kiểm soát cảm xúc, thường có những lời nói bộc phát, thiếu kiểm soát." />
                     <FeatureBox delay="150" color="color-extra05-style" icon="89" title="Dễ quên và khó ghi nhớ" 
-                    text="Magna aliquaenim minim veniam nostrud exercit ation ullamco laboris." />
+                    text="Trẻ gặp khó khăn khi ghi nhớ chữ cái, bài học, con số." />
                 </div>
             </div>
         </div>

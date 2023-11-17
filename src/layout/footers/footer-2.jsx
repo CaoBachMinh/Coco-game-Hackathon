@@ -6,12 +6,12 @@ import FooterSocial from './component/footer-social';
 
 const footer_contents = {
     desc: 'Cảm ơn sự hỗ trợ từ Trung tâm Hướng Dương, Trung tâm can thiệp sớm An Phúc, Trung tâm Giải pháp giáo dục NewWings, Trung tâm can thiệp sớm Sơn Ca.',
-    teacher: 'Nguyễn Võ Thanh Việt',
-    advisor: 'Võ Nguyễn Đình Trí',
-    tool:'Bing AI Image Creator, ChatGPT, Visual Studio Code, Github, Vercel'
+    advisor: 'Thầy Trần Thanh Hòa, Phạm Thị Hằng, Nguyễn Quang Hào.',
+    tool:'Bing AI Image Creator, ChatGPT, Visual Studio Code, Github, Vercel',
+    tech: 'NextJS, ReactJS'
 }
 
-const { desc, advisor, teacher, tool} = footer_contents;
+const { desc, advisor, tool,tech} = footer_contents;
 
 const FooterTwo = () => {
     const { mouseDirection, mouseReverse } = useMouseMoveUI();
@@ -28,6 +28,7 @@ const FooterTwo = () => {
                                         <li>{desc}</li>
                                         <li><span>Cố vấn dự án:</span>{advisor}</li>
                                         <li><span>Công cụ:</span>{tool}</li>
+                                        <li><span>Công nghệ:</span>{tech}</li>
                                     </ul>
                                 </div>
                             </div>

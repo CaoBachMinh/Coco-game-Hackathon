@@ -10,7 +10,7 @@ const instructors_data = [
         name:'Nguyễn Khánh Ngân',
         title:'',
         delay:'50',
-        sm_text:"Consectetur adipisicing elit, sed do eius mod tempor incididunt"
+        sm_text:"THPT Chuyên Lê Quý Đôn"
     },
     {
         id:2,
@@ -23,7 +23,7 @@ const instructors_data = [
         name:'Nguyễn Đỗ Thiện Nhân',
         title:'',
         delay:'100',
-        sm_text:"Consectetur adipisicing elit, sed do eius mod tempor incididunt"
+        sm_text:"THPT Chuyên Lê Quý Đôn"
     },
     {
         id:3,
@@ -36,7 +36,7 @@ const instructors_data = [
         name:'Trần Thanh Nhân',
         title:'Leader',
         delay:'150',
-        sm_text:"Consectetur adipisicing elit, sed do eius mod tempor incididunt"
+        sm_text:"THPT Phan Châu Trinh"
     },
     {
         id:4,
@@ -49,7 +49,7 @@ const instructors_data = [
         name:'Cao Thái Minh',
         title:'Developer',
         delay:'200',
-        sm_text:"Consectetur adipisicing elit, sed do eius mod tempor incididunt"
+        sm_text:"THPT Phan Châu Trinh"
     },
     {
         id:5,

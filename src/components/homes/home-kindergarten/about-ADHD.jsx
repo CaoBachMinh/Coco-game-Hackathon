@@ -12,7 +12,7 @@ const About_ADHD = () => {
                     <div className="col-lg-6">
                         <div className="about-image-gallery">
                             <div className="main-img-1">
-                                <img src="/assets/images/iStock-1090990634.jpg" alt="About Image" />
+                                <img src="/assets/images/49539_199222fb7366fa08617a0936119d2164_blog.jpg" alt="About Image" />
                             </div>
                             <ul className="shape-group">
                                 <li className="shape-1">
