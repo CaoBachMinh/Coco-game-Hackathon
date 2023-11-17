@@ -9,7 +9,7 @@ import CounterArea from '../about-3/counter-area';
 import WhyChose from './why-chose';
 import Choses from '../../homes/home-kindergarten/category-area';
 import About_ADHD from './about-ADHD';
-
+import Blog from './ADHD-blog';
 const index = () => {
     return (
         <div className='sticky-header'>
@@ -20,7 +20,7 @@ const index = () => {
                 <WhyChose/>
                 <About_ADHD/>
                 {/* <Testimonial/> */}
-                <CounterArea/>
+                <Blog/>
                 {/* <TeamArea about_p={true} /> */}
                 <FooterTwo style_2={'footer-dark bg-image footer-style-2'} />
             </div>

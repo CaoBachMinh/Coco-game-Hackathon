@@ -10,7 +10,6 @@ import TeamArea from '../../teams/team-2/team-area';
 import CounterArea from './counter-area';
 import About_ADHD from './about-ADHD';
 import About_gami from './about-gami';
-
 const index = () => {
     return (
         <div className='sticky-header'>
@@ -19,11 +18,12 @@ const index = () => {
                 <Header/>
                 <HeroArea/>
                 <AboutArea/>
+                <About_ADHD/>
                 <About_gami/>
                 <Choses/>
                 <CoursesArea/>
                 <CounterArea/>
-                <About_ADHD/>
+                
                 {/* <Treatment/> */}
                 <TeamArea/>
                 <FooterTwo />

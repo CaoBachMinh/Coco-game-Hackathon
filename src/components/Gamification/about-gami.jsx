@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 import { motion } from 'framer-motion';
-import { useMouseMoveUI } from '../../../contexts/mouse-move-context';
+import { useMouseMoveUI } from '../../contexts/mouse-move-context';
 
 const About_gami = () => {
     const { mouseDirection, mouseReverse } = useMouseMoveUI();
@@ -27,7 +27,7 @@ const About_gami = () => {
                                         <h1 className="title">9%</h1>
                                         <p>Số trẻ em tại Việt Nam đang mắc hội chứng tăng động giảm chú ý</p>
                                     </div> */}
-                                    <p>Là việc ứng dụng những cơ chế của trò chơi tương tác như bảng xếp hạng, nhiệm vụ, phần thưởng vào các hoạt động như: marketing, giáo dục để thúc đẩy người tham gia hoàn thành các mục tiêu cụ thể. Gamification trong chăm sóc sức khỏe đang dần trở nên phổ biến hơn với những nỗ lực áp dụng các nguyên tắc chơi game để cải thiện các triệu chứng kết quả lâm sàng.</p>
+                                    <p>Nội dung</p>
                                 </div>
                             </div>
                             <div style={{ justifyContent: 'center', alignItems: 'left' }}>

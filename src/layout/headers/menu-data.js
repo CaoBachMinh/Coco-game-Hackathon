@@ -1,8 +1,8 @@
 const menu_data = [
     {
         title: 'Phương pháp Gamification',
-        link: '#',
-        check_drop : true,
+        link: '/Gamification',
+        check_drop : false,
         submenus:[
             {title: 'Gamification là gì', link: '/'},
         ]

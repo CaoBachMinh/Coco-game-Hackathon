@@ -1,13 +1,19 @@
 import Link from 'next/link';
 import React from 'react';
 import { motion } from 'framer-motion';
-import { useMouseMoveUI } from '../../../contexts/mouse-move-context';
+import { useMouseMoveUI } from '../../contexts/mouse-move-context';
 
 const About_ADHD = () => {
     const { mouseDirection, mouseReverse } = useMouseMoveUI();
     return (
         <div className="edu-about-area about-style-6">
             <div className="container">
+                <div className="section-title section-center" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
+                    <span className="pre-title pre-textsecondary">Những nghiên cứu về:</span>
+                    <h2 className="title" style={{ fontSize: '40px' }}>Phương pháp Gamification:</h2>
+                    {/* <span className="shape-line"><i className="icon-19"></i></span> */}
+                    {/* <h5></h5> */}
+                </div>
                 <div className="row g-5 align-items-center">
                     <div className="col-lg-6">
                         <div className="about-image-gallery">
@@ -105,10 +111,10 @@ const About_ADHD = () => {
                                     <img src="/assets/images/about/shape-12.png" alt="Shape" />
                                 </li>
                                 <motion.li className="shape-3 scene"
-                                    animate={ {
+                                    animate={{
                                         x: mouseReverse(40).x,
                                         y: mouseReverse(40).y
-                                    } }
+                                    }}
                                 >
                                     <img src="/assets/images/about/shape-13.png" alt="Shape" />
                                 </motion.li>
