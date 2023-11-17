@@ -17,7 +17,6 @@ const WhyChose = () => {
                     <ChoseBox color="color-primary-style" icon="1" title="Liệu pháp hành vi" subtitle="Liệu pháp hành vi là biện pháp can thiệp phổ biến ở Việt Nam, có thể được áp dụng với hầu hết các trẻ mắc chứng rối loạn tăng giảm chú ý." />
 
                     <ChoseBox color="color-secondary-style" icon="38" title="Điều trị bằng thuốc" subtitle="Điều trị ADHD bằng thuốc thường sử dụng thuốc kích thích hoặc thuốc không kích thích để giảm triệu chứng. Điều này thường đòi hỏi sự theo dõi của bác sĩ và có thể kết hợp với phương pháp tâm lý học." />
-                    <ChoseBox color="color-primary-style" icon="38" title="Phương pháp Gamification" subtitle="Noi dung" />
                 </div>
                 <ul className="shape-group">
                     <li className="shape-5" data-sal-delay="500" data-sal="fade" data-sal-duration="200">

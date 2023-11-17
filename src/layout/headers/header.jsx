@@ -45,7 +45,7 @@ const Header = ({ header_style, no_top_bar, disable_full_width, disable_category
                         </div>
 
                         <div className='header-top'>
-                            <ul className="header-info">
+                            <ul className="header-info" >
                                 <li><Link href="/sign-in">Đăng nhập</Link></li>
                                 <li><Link href="/sign-in">Đăng kí</Link></li>
                             </ul>

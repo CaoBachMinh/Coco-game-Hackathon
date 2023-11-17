@@ -6,9 +6,9 @@ import FooterSocial from './component/footer-social';
 
 const footer_contents = {
     desc: 'Cảm ơn sự hỗ trợ từ Trung tâm Hướng Dương, Trung tâm can thiệp sớm An Phúc, Trung tâm Giải pháp giáo dục NewWings, Trung tâm can thiệp sớm Sơn Ca.',
-    advisor: 'Thầy Trần Thanh Hòa, Phạm Thị Hằng, Nguyễn Quang Hào.',
+    advisor: 'Thầy Trần Thanh Hòa, chị Phạm Thị Hằng, anh Nguyễn Quang Hào.',
     tool:'Bing AI Image Creator, ChatGPT, Visual Studio Code, Github, Vercel',
-    tech: 'NextJS, ReactJS'
+    tech: 'NextJS, ReactJS,BootStrap'
 }
 
 const { desc, advisor, tool,tech} = footer_contents;

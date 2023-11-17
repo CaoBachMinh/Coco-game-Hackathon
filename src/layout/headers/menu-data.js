@@ -14,7 +14,7 @@ const menu_data = [
         submenus: [
             {title: 'ADHD là gì', link: 'about-1'},
             {title: 'Các triệu chứng', link: 'about-1'},
-            { title: 'Nguyên nhân', link: '/about-1'},
+            // { title: 'Nguyên nhân', link: '/about-1'},
             { title: 'Các phương pháp điều trị', link: '/about-1' },
         ]
     },
