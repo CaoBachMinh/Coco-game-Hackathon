@@ -27,14 +27,15 @@ const About_gami = () => {
                                         <h1 className="title">9%</h1>
                                         <p>Số trẻ em tại Việt Nam đang mắc hội chứng tăng động giảm chú ý</p>
                                     </div> */}
-                                    <p>Nội dung</p>
+                                    <p style={{textAlign:'justify'}}>Phương pháp Gamification là một cách tiếp cận trong đó các yếu tố và nguyên tắc trò chơi được sử dụng tạo ra trải nghiệm học 
+                                    tập hiệu quả và hấp dẫn hơn. Gamification có thể được sử dụng một cách hiệu quả để giúp người học áp dụng việc vừa học vừa làm của họ thông qua các hoạt động 
+                                    tình huống thực tế trong một môi trường được kiểm soát.</p>
                                 </div>
                             </div>
                             <div style={{ justifyContent: 'center', alignItems: 'left' }}>
-                                <Link href="/">
-                                    <a className="edu-btn btn-curved">
-                                        Tìm hiểu thêm <i className="icon-4"></i>
-                                    </a>
+                                <Link href="/DetailGami" className="edu-btn btn-curved">
+                                    Tìm hiểu thêm<i className="icon-4"></i>
+
                                 </Link>
                             </div>
                         </div>
@@ -51,7 +52,7 @@ const About_gami = () => {
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 export default About_gami;

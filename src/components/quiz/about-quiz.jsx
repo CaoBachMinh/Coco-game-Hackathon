@@ -36,10 +36,12 @@ const AboutQuiz = () => {
                                         Bắt đầu ngay <i className="icon-4"></i>
                                     </a>
                                 </Link> */}
-                                <Link href="https://psy-edu.net/test/thang-danh-gia-tang-dong-giam-chu-y-adhd-vanderbilt-danh-cho-cha-me/">
-                                    <a className="edu-btn btn-curved" target="_blank">
-                                        Bắt đầu ngay <i className="icon-4"></i>
-                                    </a>
+                                <Link
+                                    href="https://psy-edu.net/test/thang-danh-gia-tang-dong-giam-chu-y-adhd-vanderbilt-danh-cho-cha-me/"
+                                    className="edu-btn btn-curved"
+                                    target="_blank">
+                                    Bắt đầu ngay<i className="icon-4"></i>
+
                                 </Link>
                             </div>
                         </div>
@@ -107,7 +109,7 @@ const AboutQuiz = () => {
                 <li className="shape-1" data-sal-delay="500" data-sal="fade" data-sal-duration="200"></li>
             </ul>
         </div>
-    )
+    );
 }
 
 export default AboutQuiz;

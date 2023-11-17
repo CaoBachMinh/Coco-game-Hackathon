@@ -31,10 +31,9 @@ const About_gami = () => {
                                 </div>
                             </div>
                             <div style={{ justifyContent: 'center', alignItems: 'left' }}>
-                                <Link href="/">
-                                    <a className="edu-btn btn-curved">
-                                        Tìm hiểu thêm <i className="icon-4"></i>
-                                    </a>
+                                <Link href="/" className="edu-btn btn-curved">
+                                    Tìm hiểu thêm<i className="icon-4"></i>
+
                                 </Link>
                             </div>
                         </div>
@@ -51,7 +50,7 @@ const About_gami = () => {
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 export default About_gami;

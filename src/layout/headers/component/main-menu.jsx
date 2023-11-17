@@ -10,20 +10,20 @@ const MainMenu = () => {
                     <li key={i} className="has-droupdown">
 
                         <Link href={`${menu.link}`}>
-                            <a>
-                                {menu.title}
-                            </a>
+
+                            {menu.title}
+
                         </Link>
                         {!menu.mega_menu && menu.check_drop != false &&
                             <ul className="submenu">
                                 {menu.submenus?.map((nav, j) => (
                                     <li key={j}>
                                         <Link href={`${nav.link}`}>
-                                            <a>
-                                                {nav.title}
-                                                {nav?.hot && <span className="badge-1">hot</span>}
-                                                {nav?.new && <span className="badge">new</span>}
-                                            </a>
+
+                                            {nav.title}
+                                            {nav?.hot && <span className="badge-1">hot</span>}
+                                            {nav?.new && <span className="badge">new</span>}
+
                                         </Link>
                                     </li>
                                 )) ?? []}
@@ -32,7 +32,7 @@ const MainMenu = () => {
 
 
                     </li>
-                )
+                );
             })}
         </ul>
     );

@@ -54,10 +54,9 @@ const About_ADHD = () => {
                                     </div>
                                 </div>
                                 <div style={{ justifyContent: 'center', alignItems: 'left' }}>
-                                    <Link href="/about-1">
-                                        <a className="edu-btn">
-                                            Tìm hiểu thêm ADHD <i className="icon-4"></i>
-                                        </a>
+                                    <Link href="/about-1" className="edu-btn">
+                                        Tìm hiểu thêm ADHD<i className="icon-4"></i>
+
                                     </Link>
                                 </div>
                             </div>
@@ -120,7 +119,7 @@ const About_ADHD = () => {
 
             </div>
         </div>
-    )
+    );
 }
 
 export default About_ADHD;

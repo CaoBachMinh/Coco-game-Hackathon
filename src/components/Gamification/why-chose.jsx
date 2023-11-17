@@ -14,7 +14,7 @@ function FeatureBox({ img, color, title, icon, text }) {
                         <i className={`icon-${icon}`}></i>
                     </div>
                     <h4 className="title">{title}</h4>
-                    <p>{text}</p>
+                    <p style={{textAlign:'justify'}}>{text}</p>
                 </div>
             </div>
         </div>

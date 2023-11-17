@@ -24,12 +24,19 @@ const menu_data = [
         mega_menu : false,
         check_drop : false,
     },
+
+    {
+        title: 'Game',
+        link: '/Game',
+        check_drop: false
+    },
     
     {
         title: 'Về chúng tôi',
         link: "/team-1",
         check_drop: false,
-    }
+    },
+
 ]
 
 export default menu_data;

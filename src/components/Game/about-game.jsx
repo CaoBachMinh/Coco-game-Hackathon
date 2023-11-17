@@ -1,12 +1,12 @@
 import Link from 'next/link';
 import React from 'react';
 import { motion } from 'framer-motion';
-import { useMouseMoveUI } from '../../../contexts/mouse-move-context';
-import { course_data } from '../../../data';
+import { useMouseMoveUI } from '../../contexts/mouse-move-context';
+import { course_data } from '../../data';
 
 const courses = course_data.filter(course => course.kindergarten_course)
 
-const CoursesArea = () => {
+const Game = () => {
     const { mouseDirection, mouseReverse } = useMouseMoveUI();
     return (
         <div className="edu-course-area course-area-7" >
@@ -79,4 +79,4 @@ const CoursesArea = () => {
     );
 }
 
-export default CoursesArea;
+export default Game;
