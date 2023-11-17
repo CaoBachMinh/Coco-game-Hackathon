@@ -30,8 +30,14 @@ const AboutQuiz = () => {
                             </div>
 
                             <div className="banner-btn" data-sal-delay="400" data-sal="slide-up" data-sal-duration="1000">
-                                <Link href="https://quiz-sigma-sand.vercel.app/">
-                                    <a className="edu-btn btn-curved">
+                                {/* Comment in case of having a solution to send and receive result*/}
+                                {/* <Link href="https://quiz-sigma-sand.vercel.app/">
+                                    <a className="edu-btn btn-curved" target="_blank">
+                                        Bắt đầu ngay <i className="icon-4"></i>
+                                    </a>
+                                </Link> */}
+                                <Link href="https://psy-edu.net/test/thang-danh-gia-tang-dong-giam-chu-y-adhd-vanderbilt-danh-cho-cha-me/">
+                                    <a className="edu-btn btn-curved" target="_blank">
                                         Bắt đầu ngay <i className="icon-4"></i>
                                     </a>
                                 </Link>
