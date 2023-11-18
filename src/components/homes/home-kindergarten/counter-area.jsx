@@ -49,7 +49,7 @@ const CounterArea = ({ about_p_3 }) => {
                                         <h1 className="title" style={{ textTransform: 'none', color: color, fontWeight: 700, fontSize: '32px', marginBottom: '10px' }}>
                                             {title}
                                         </h1>
-                                        <p>{text}</p>
+                                        <p style={{textAlign:'justify',fontSize:'15px'}}>{text}</p>
 
                                     </div>
                                 </div>

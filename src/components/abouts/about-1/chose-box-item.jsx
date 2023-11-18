@@ -8,7 +8,7 @@ export default function ChoseBox ({color,icon,title,subtitle, span}) {
                 <div className="content">
                     <h4 className="title">{title}</h4>
                     <h4 color="red">{span}</h4>
-                    <p>{subtitle}</p>
+                    <p style={{textAlign:'justify'}}>{subtitle}</p>
                 </div>
             </div>
         </div>
