@@ -4,7 +4,7 @@ import Quiz from '../components/quiz/index';
 export default function SignIn() {
     return (
         <Wrapper>
-            <SEO pageTitle={'Sign In'} />
+            <SEO pageTitle={'Quiz'} />
             <Quiz/>
         </Wrapper>
     )

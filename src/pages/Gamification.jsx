@@ -4,7 +4,7 @@ import Gamification from '../components/Gamification/index';
 export default function SignIn() {
     return (
         <Wrapper>
-            <SEO pageTitle={'Sign In'} />
+            <SEO pageTitle={'Gamification'} />
             <Gamification/>
         </Wrapper>
     )

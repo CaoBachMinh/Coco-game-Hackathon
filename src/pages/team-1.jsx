@@ -5,7 +5,7 @@ import TeamOneMain from '../components/teams/team-1';
 const TeamOne = () => {
     return (
         <Wrapper>
-            <SEO pageTitle={'Team One'} />
+            <SEO pageTitle={'About Us'} />
             <TeamOneMain />
         </Wrapper>
     )
