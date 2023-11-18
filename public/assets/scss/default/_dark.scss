@@ -1964,15 +1964,43 @@
             }
         }
     }
-    .header-style-2 {
+    .header-style-1 {
         .header-top {
             .header-info {
                 li {
+                    &::before{
+                        color: black;
+                    }
                     &::after {
                         background-color: #30302f;
                     }
                     a {
-                        color: var(--color-white);
+                        
+                        background-color: none;
+                    }
+                }
+            }
+        }
+        .header-mainmenu {
+            .header-right {
+                &::after {
+                    background-color: var(--dark-color-border);
+                }
+            }
+        }
+    }
+    .header-style-2 {
+        .header-top {
+            .header-info {
+                li {
+                    &::before{
+                        background-color: black;
+                    }
+                    &::after {
+                        background-color: #30302f;
+                    }
+                    a {
+                        background-color: var(--color-black);
                     }
                 }
             }
