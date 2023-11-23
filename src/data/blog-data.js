@@ -2,7 +2,7 @@ const blog_data = [
   {
     id: 1,
     img: '/assets/images/blog/blog-01.jpg',
-    category: 'ONLINE',
+    category: 'Baso',
     title: 'Become a Better Blogger: Content Planning',
     date: "Oct 10, 2022",
     comment: 9,
@@ -116,35 +116,40 @@ const blog_data = [
   {
     id: 11,
     img: '/assets/images/blog/blog-07.jpg',
-    category: 'ONLINE',
+    category: 'Báo VnExpress',
     title: 'Không có bệnh tăng động giảm chú ý',
     date: "Nov 20, 2022",
     comment: 10,
-    sm_desc: '"Chứng tăng động giảm chú ý không tồn tại và việc uống thuốc chỉ gây thêm nhiều tác hại cho trẻ", tuyên bố của bác sĩ Richard Saul, nhà thần kinh học hành vi đang là cú sốc với y học.',
+    sm_desc: 'Chứng tăng động giảm chú ý không tồn tại và việc uống thuốc chỉ gây thêm nhiều tác hại cho trẻ", tuyên bố của bác sĩ Richard Saul, nhà thần kinh học hành vi đang là cú sốc với y học.',
     author:'Edward',
     kindergarten_blog:true,
+    linkpage: 'https://vnexpress.net/khong-co-benh-tang-dong-giam-chu-y-2963536.html',
   },
   {
     id: 12,
     img: '/assets/images/blog/blog-08.jpg',
-    category: 'HISTORY',
+    category: 'Báo VnExpress',
     title: 'Hoạt động thú vị cho trẻ bị rối loạn tăng động giảm chú ý',
     date: "Dec 20, 2022",
     comment: 12,
     sm_desc: 'Tham gia các hoạt động thể thao, sáng tạo, nấu ăn, cắm trại… có thể giúp trẻ rối loạn tăng động cải thiện sức khỏe tinh thần, thể chất.',
     author:'Edward',
     kindergarten_blog:true,
+    linkpage: 'https://vnexpress.net/hoat-dong-thu-vi-cho-tre-bi-roi-loan-tang-dong-giam-chu-y-4476932.html',
+
   },
   {
     id: 13,
     img: '/assets/images/blog/blog-09.jpg',
-    category: 'BASEBALL',
+    category: 'Báo Nhân Dân',
     title: 'Hơn 50% bệnh nhi rối loạn tăng động suy giảm chức năng xã hội ở tuổi trưởng thành',
     date: "Feb 20, 2022",
     comment: 15,
     sm_desc: 'Hơn 50% bệnh nhân trẻ em được chẩn đoán ADHD tiếp tục có những biểu hiện triệu chứng trong suốt thời kỳ thanh thiếu niên và hơn một nửa có những suy giảm chức năng xã hội ở tuổi trưởng thành.',
     author:'Edward',
     kindergarten_blog:true,
+    linkpage: 'https://nhandan.vn/hon-50-benh-nhi-roi-loan-tang-dong-suy-giam-chuc-nang-xa-hoi-o-tuoi-truong-thanh-post694654.html',
+
   },
   // modern schooling
   {

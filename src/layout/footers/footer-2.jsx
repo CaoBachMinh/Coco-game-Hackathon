@@ -8,7 +8,7 @@ const footer_contents = {
     desc: 'Cảm ơn sự hỗ trợ từ Trung tâm Hướng Dương, Trung tâm can thiệp sớm An Phúc, Trung tâm Giải pháp giáo dục NewWings, Trung tâm can thiệp sớm Sơn Ca.',
     advisor: 'Thầy Trần Thanh Hòa, chị Phạm Thị Hằng, anh Nguyễn Quang Hào.',
     tool:'Bing AI Image Creator, ChatGPT, Visual Studio Code, Github, Vercel',
-    tech: 'NextJS, ReactJS, BootStrap, Framermotion'
+    tech: 'NextJS, ReactJS, BootStrap, Framermotion, Firebase'
 }
 
 const { desc, advisor, tool,tech} = footer_contents;

@@ -47,7 +47,7 @@ const instructors_data = [
             {link: 'https://www.linkedin.com/', target: '_blank', icon: 'icon-linkedin2'}
         ],
         name:'Cao Thái Minh',
-        title:'Developer',
+        title:'Main Developer',
         delay:'200',
         sm_text:"THPT Phan Châu Trinh"
     },
