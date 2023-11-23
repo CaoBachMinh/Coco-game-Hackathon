@@ -36,7 +36,7 @@ const LoginForm = (user) => {
     return (
         <form onSubmit={handleSubmit}>
             <div className="form-group">
-                <label htmlFor="current-log-email">Username or email*</label>
+                <label htmlFor="current-log-email">Tên đăng nhập hoặc Email*</label>
                 <input 
                     value={values.email} 
                     onChange={handleChange}
@@ -49,7 +49,7 @@ const LoginForm = (user) => {
             </div>
             
             <div className="form-group">
-                <label htmlFor="current-log-password">Password*</label>
+                <label htmlFor="current-log-password">Mật khẩu*</label>
                 <input 
                     value={values.password} 
                     onChange={handleChange}
@@ -65,12 +65,9 @@ const LoginForm = (user) => {
             {touched.password && <ErrorMsg error={errors.password} />}
 
             <div className="form-group chekbox-area">
-                <div className="edu-form-check">
-                    <input type="checkbox" id="remember-me" />
-                    <label htmlFor="remember-me">Remember Me</label>
-                </div>
+                
                 <a href="#" onClick={()=> handleResetPass(values.email)} 
-                className="password-reset">Lost your password?</a>
+                className="password-reset">Quên mật khẩu?</a>
             </div>
 
             <div className="form-group">

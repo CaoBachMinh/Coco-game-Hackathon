@@ -28,16 +28,16 @@ const SignInArea = () => {
                 <div className="row g-5 justify-content-center">
                     <div className="col-lg-5">
                         <div className="login-form-box">
-                            <h3 className="title">Sign in</h3>
-                            <p>Don’t have an account? <a href="#">Sign up</a></p>
+                            <h3 className="title">Đăng nhập</h3>
+                            <p>Chưa có tài khoản? <a href="#">Đăng kí</a></p>
                             <LoginForm user={setUser}/>
                         </div>
                     </div>
 
                     <div className="col-lg-5">
                         <div className="login-form-box registration-form">
-                            <h3 className="title">Registration</h3>
-                            <p>Already have an account? <a href="#">Sign in</a></p>
+                            <h3 className="title">Đăng ký</h3>
+                            <p>Đã có tài khoản? <a href="#">Đăng nhập</a></p>
                             <RegisterForm user={setUser}/>
                         </div>
                     </div>
