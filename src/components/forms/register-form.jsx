@@ -5,8 +5,10 @@ import { registerSchema } from '../../utils/validation-schema';
 import ErrorMsg from './error-msg';
 import Link from 'next/link';
 import { useState } from 'react';
+import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
 
-const RegisterForm = () => {
+const RegisterForm = (user) => {
+    const auth = getAuth();
     const [showPass, setShowPass] = useState(false);
     // register With Email Password
     const { registerWithEmailPassword } = useFirebase();
@@ -15,7 +17,15 @@ const RegisterForm = () => {
         initialValues: { name: '', email: '', password: '', terms: false },
         validationSchema: registerSchema,
         onSubmit: (values, { resetForm }) => {
-            registerWithEmailPassword(values.email, values.password, values.name)
+            /*registerWithEmailPassword(values.email, values.password, values.name)*/
+            createUserWithEmailAndPassword(auth,values.email,values.password,values.name)
+            .then((userCredential) => {
+                user(userCredential.user);
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+            })
             resetForm()
         }
     })

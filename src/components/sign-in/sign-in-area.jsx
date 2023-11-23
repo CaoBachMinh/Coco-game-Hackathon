@@ -1,8 +1,27 @@
 import React from 'react';
 import LoginForm from '../forms/login-form';
 import RegisterForm from '../forms/register-form';
+import { useState } from 'react';
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
+
+const auth = getAuth();
 
 const SignInArea = () => {
+    const [user,setUser] = useState(null);
+    const [isSignIn,setIsSignIn] = useState(false);
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+          // User is signed in, see docs for a list of available properties
+          // https://firebase.google.com/docs/reference/js/auth.user
+          const uid = user.uid;
+          // ...
+          console.log('da dang nhap');
+        } else {
+          // User is signed out
+          // ...
+        }
+      });
+
   return (
         <section className="account-page-area section-gap-equal">
             <div className="container position-relative">
@@ -11,7 +30,7 @@ const SignInArea = () => {
                         <div className="login-form-box">
                             <h3 className="title">Sign in</h3>
                             <p>Don’t have an account? <a href="#">Sign up</a></p>
-                            <LoginForm/>
+                            <LoginForm user={setUser}/>
                         </div>
                     </div>
 
@@ -19,7 +38,7 @@ const SignInArea = () => {
                         <div className="login-form-box registration-form">
                             <h3 className="title">Registration</h3>
                             <p>Already have an account? <a href="#">Sign in</a></p>
-                            <RegisterForm/>
+                            <RegisterForm user={setUser}/>
                         </div>
                     </div>
                 </div>

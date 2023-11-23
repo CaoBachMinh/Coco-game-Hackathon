@@ -4,8 +4,10 @@ import useFirebase from '../../hooks/use-firebase';
 import { loginSchema } from '../../utils/validation-schema';
 import ErrorMsg from './error-msg';
 import { useState } from 'react';
+import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 
-const LoginForm = () => {
+const auth = getAuth(); 
+const LoginForm = (user) => {
     const [showPass,setShowPass] = useState(false);
     // use firebase 
     const { loginWithEmailPassword, resetPassword } = useFirebase();
@@ -14,7 +16,15 @@ const LoginForm = () => {
         initialValues: { email: '', password: '' },
         validationSchema: loginSchema,
         onSubmit: (values, { resetForm }) => {
-            loginWithEmailPassword(values.email, values.password)
+            /*loginWithEmailPassword(values.email, values.password)*/
+            signInWithEmailAndPassword(auth,values.email,values.password)
+            .then((userCredential) => {
+                user(userCredential.user);
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+            })
             resetForm()
         }
     })
