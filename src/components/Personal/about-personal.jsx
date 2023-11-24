@@ -11,11 +11,13 @@ const Personal = ({ title }) => {
     const { mouseDirection, mouseReverse } = useMouseMoveUI();
     const [displayName, setDisplayName] = useState(null);
     const [email, setEmail] = useState(null);
-
+    const [day, setDay] = useState(null);
+    const [age,setAge] = useState(null);
     useEffect(() => {
         if (user !== null) {
             setDisplayName(user.displayName);
             setEmail(user.email);
+            setDay(user.metadata.creationTime);
             // The user's ID, unique to the Firebase project. Do NOT use
             // this value to authenticate with your backend server, if
             // you have one. Use User.getToken() instead.
@@ -37,7 +39,7 @@ const Personal = ({ title }) => {
                     <div className="page-title">
                         <h1 className="title">{title}</h1>
                     </div>
-                    
+
                     <div className="row" style={{
                         marginTop: '60px'
                     }}>
@@ -53,14 +55,15 @@ const Personal = ({ title }) => {
                                     borderRadius: '0.5rem',
                                     boxShadow: '0 2px 15px -3px rgba(var(--mdb-box-shadow-color-rgb), 0.07), 0 10px 20px -2px rgba(var(--mdb-box-shadow-color-rgb), 0.04)',
                                     backgroundClip: "border-box",
+                                    alignItems: 'center'
 
                                 }}>
-                                    <h5 className="my-3">John Smith</h5>
-                                    <p className="text-muted mb-1">Full Stack Developer</p>
-                                    <p className="text-muted mb-4">Bay Area, San Francisco, CA</p>
+                                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"
+                                        class="rounded-circle img-fluid" style={{width: '150px', alignItems: 'center',display: 'flex'}}></img>
+                                    <h5 className="my-3" style={{marginTop:'20px'}}>{displayName}</h5>
                                     <div className="d-flex justify-content-center mb-2">
                                         <button type="button" className="btn btn-primary" style={{
-                                            
+
                                         }}>
                                             Follow
                                         </button>
@@ -70,7 +73,7 @@ const Personal = ({ title }) => {
                                     </div>
                                 </div>
                             </div>
-                            
+
                         </div>
 
                         <div className="col-lg-8">
@@ -86,7 +89,7 @@ const Personal = ({ title }) => {
                                 borderRadius: '0.5rem',
                                 boxShadow: '0 2px 15px -3px rgba( 0, 0, 0 , 0.07), 0 10px 20px -2px rgba( 0, 0, 0 , 0.04)',
 
-                                }}>
+                            }}>
                                 {/* Card Body */}
                                 <div className="card-body">
                                     {/* Details */}
@@ -97,7 +100,7 @@ const Personal = ({ title }) => {
                                         marginLeft: 'calc(-0.5*var(1.5rem))',
                                         marginRight: 'calc(-0.5*var(1.5rem))',
                                         boxSizing: 'border-box',
-                                        
+
                                     }}>
                                         <div className="col-sm-3" style={{
                                             paddingLeft: '1.5rem',
@@ -106,7 +109,7 @@ const Personal = ({ title }) => {
                                             paddingRight: '1.5rem',
                                             textAlign: 'left'
                                         }}>
-                                            <p className="mb-0" style={{marginBottom: '0', color: 'white'}}>Email của bạn:</p>
+                                            <p className="mb-0" style={{ marginBottom: '0', color: 'white' }}>Email của bạn:</p>
                                         </div>
                                         <div className="col-sm-9" style={{
                                             paddingLeft: '0.05rem',
@@ -117,7 +120,7 @@ const Personal = ({ title }) => {
                                             <p className="mb-0" style={{
                                                 marginBottom: '0',
                                                 color: 'rgba(255, 255, 255, 0.75)',
-                                                
+
                                             }}>{email}</p>
                                         </div>
                                     </div>
@@ -130,7 +133,38 @@ const Personal = ({ title }) => {
                                         marginLeft: 'calc(-0.5*var(1.5rem))',
                                         marginRight: 'calc(-0.5*var(1.5rem))',
                                         boxSizing: 'border-box',
-                                        
+
+                                    }}>
+                                        <div className="col-sm-3" style={{
+                                            paddingLeft: '1.5rem',
+                                            marginTop: '0',
+                                            maxWidth: '100%',
+                                            textAlign: 'left'
+                                        }}>
+                                            <p className="mb-0" style={{ marginBottom: '0', color: 'white' }}>Độ tuổi của bạn:</p>
+                                        </div>
+                                        <div className="col-sm-9" style={{
+                                            paddingLeft: '0.05rem',
+                                            marginTop: '0',
+                                            maxWidth: '100%',
+                                            paddingRight: '1.5rem'
+                                        }}>
+                                            <p className="mb-0" style={{
+                                                marginBottom: '0',
+                                                color: 'rgba(255, 255, 255, 0.75)',
+
+                                            }}>{email}</p>
+                                        </div>
+                                    </div>
+                                    <hr />
+                                    <div className="row" style={{
+                                        flexWrap: 'wrap',
+                                        display: 'flex',
+                                        marginTop: '1rem',
+                                        marginLeft: 'calc(-0.5*var(1.5rem))',
+                                        marginRight: 'calc(-0.5*var(1.5rem))',
+                                        boxSizing: 'border-box',
+
                                     }}>
                                         <div className="col-sm-3" style={{
                                             paddingLeft: '1.5rem',
@@ -139,7 +173,7 @@ const Personal = ({ title }) => {
                                             paddingRight: '1.5rem',
                                             textAlign: 'left'
                                         }}>
-                                            <p className="mb-0" style={{marginBottom: '0', color: 'white'}}>Ngày tạo tài khoản:</p>
+                                            <p className="mb-0" style={{ marginBottom: '0', color: 'white' }}>Ngày tạo tài khoản:</p>
                                         </div>
                                         <div className="col-sm-9" style={{
                                             paddingLeft: '0.05rem',
@@ -150,11 +184,11 @@ const Personal = ({ title }) => {
                                             <p className="mb-0" style={{
                                                 marginBottom: '0',
                                                 color: 'rgba(255, 255, 255, 0.75)',
-                                            
-                                            }}>{email}</p>
+
+                                            }}>{day}</p>
                                         </div>
                                     </div>
-                                    <hr/>
+                                    <hr />
                                     <div className="row" style={{
                                         flexWrap: 'wrap',
                                         display: 'flex',
@@ -162,7 +196,7 @@ const Personal = ({ title }) => {
                                         marginLeft: 'calc(-0.5*var(1.5rem))',
                                         marginRight: 'calc(-0.5*var(1.5rem))',
                                         boxSizing: 'border-box',
-                                        
+
                                     }}>
                                         <div className="col-sm-3" style={{
                                             paddingLeft: '1.5rem',
@@ -170,7 +204,7 @@ const Personal = ({ title }) => {
                                             maxWidth: '100%',
                                             textAlign: 'left'
                                         }}>
-                                            <p className="mb-0" style={{marginBottom: '0', color: 'white'}}>Thời gian bạn đã chơi:</p>
+                                            <p className="mb-0" style={{ marginBottom: '0', color: 'white' }}>Thời gian bạn đã chơi:</p>
                                         </div>
                                         <div className="col-sm-9" style={{
                                             paddingLeft: '0.05rem',
@@ -181,17 +215,17 @@ const Personal = ({ title }) => {
                                             <p className="mb-0" style={{
                                                 marginBottom: '0',
                                                 color: 'rgba(255, 255, 255, 0.75)',
-                                            
+
                                             }}>{email}</p>
                                         </div>
                                     </div>
-                                    <hr/>
+                                    <hr />
                                     {/* Add other details as needed */}
                                 </div>
-                            </div>                            
+                            </div>
                         </div>
                     </div>
-                    <div className='Logout' style={{marginTop: '20px'}}>
+                    <div className='Logout' style={{ marginTop: '20px' }}>
                         <Link href='/'>
                             <button onClick={logout} style={{
                                 width: '190px',
