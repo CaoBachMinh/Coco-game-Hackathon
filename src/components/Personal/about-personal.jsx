@@ -40,7 +40,7 @@ const Personal = ({ title }) => {
                         <h1 className="title">{title}</h1>
                     </div>
 
-                    <div className="row" style={{
+                    <div className="row g-5 justify-content-center" style={{
                         marginTop: '60px'
                     }}>
                         <div className="col-lg-4">
@@ -51,9 +51,9 @@ const Personal = ({ title }) => {
                                     position: 'relative',
                                     display: 'flex',
                                     flexDirection: 'column',
-                                    backgroundColor: '#424242',
+                                    backgroundColor: '#1c242f',
                                     borderRadius: '0.5rem',
-                                    boxShadow: '0 2px 15px -3px rgba(var(--mdb-box-shadow-color-rgb), 0.07), 0 10px 20px -2px rgba(var(--mdb-box-shadow-color-rgb), 0.04)',
+                                    boxShadow: '0 10px 40px 0 rgba(0,0,0,.08)',
                                     backgroundClip: "border-box",
                                     alignItems: 'center'
 
@@ -61,16 +61,7 @@ const Personal = ({ title }) => {
                                     <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"
                                         class="rounded-circle img-fluid" style={{width: '150px', alignItems: 'center',display: 'flex'}}></img>
                                     <h5 className="my-3" style={{marginTop:'20px'}}>{displayName}</h5>
-                                    <div className="d-flex justify-content-center mb-2">
-                                        <button type="button" className="btn btn-primary" style={{
-
-                                        }}>
-                                            Follow
-                                        </button>
-                                        <button type="button" className="btn btn-outline-primary ms-1">
-                                            Message
-                                        </button>
-                                    </div>
+                                    
                                 </div>
                             </div>
 
@@ -79,15 +70,15 @@ const Personal = ({ title }) => {
                         <div className="col-lg-8">
                             {/* Third Card */}
                             <div className="card mb-4" style={{
-                                marginBottom: '1.5rem !important',
+                                marginBottom: '1.5rem',
                                 position: 'relative',
                                 display: 'flex',
                                 flexDirection: 'column',
                                 color: '#fff',
-                                backgroundColor: '#424242',
+                                backgroundColor: '#1c242f',
                                 backgroundClip: 'border-box',
                                 borderRadius: '0.5rem',
-                                boxShadow: '0 2px 15px -3px rgba( 0, 0, 0 , 0.07), 0 10px 20px -2px rgba( 0, 0, 0 , 0.04)',
+                                boxShadow: '0 10px 40px 0 rgba(0,0,0,.08)',
 
                             }}>
                                 {/* Card Body */}
