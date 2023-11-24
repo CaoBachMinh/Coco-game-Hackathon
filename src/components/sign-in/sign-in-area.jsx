@@ -4,10 +4,10 @@ import RegisterForm from '../forms/register-form';
 import { useState } from 'react';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 
-const auth = getAuth();
+
 
 const SignInArea = () => {
-    const [user,setUser] = useState(null);
+    const auth = getAuth();
     const [isSignIn,setIsSignIn] = useState(false);
     onAuthStateChanged(auth, (user) => {
         if (user) {
@@ -15,8 +15,9 @@ const SignInArea = () => {
           // https://firebase.google.com/docs/reference/js/auth.user
           const uid = user.uid;
           // ...
-          console.log('da dang nhap');
+          console.log('Sign In');
         } else {
+            console.log('Sign Out')
           // User is signed out
           // ...
         }
@@ -30,7 +31,7 @@ const SignInArea = () => {
                         <div className="login-form-box">
                             <h3 className="title">Đăng nhập</h3>
                             <p>Chưa có tài khoản? <a href="#">Đăng kí</a></p>
-                            <LoginForm user={setUser}/>
+                            <LoginForm />
                         </div>
                     </div>
 
@@ -38,7 +39,7 @@ const SignInArea = () => {
                         <div className="login-form-box registration-form">
                             <h3 className="title">Đăng ký</h3>
                             <p>Đã có tài khoản? <a href="#">Đăng nhập</a></p>
-                            <RegisterForm user={setUser}/>
+                            <RegisterForm />
                         </div>
                     </div>
                 </div>

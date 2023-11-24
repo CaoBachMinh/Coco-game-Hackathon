@@ -2,9 +2,28 @@ import Link from 'next/link';
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useMouseMoveUI } from '../../contexts/mouse-move-context';
+import { getAuth } from 'firebase/auth';
+import { useState } from 'react';
+import { useEffect } from 'react';
 
-const Personal = ({ title, subtitle }) => {
+const auth = getAuth();
+const Personal = ({ title}) => {
+    const user = auth.currentUser;
     const { mouseDirection, mouseReverse } = useMouseMoveUI();
+    const [displayName,setDisplayName] = useState(null);
+    const [email,setEmail] = useState(null);
+
+    useEffect(() => {
+            if (user !== null) {
+                setDisplayName(user.displayName);
+                setEmail(user.email);
+                
+            
+                // The user's ID, unique to the Firebase project. Do NOT use
+                // this value to authenticate with your backend server, if
+                // you have one. Use User.getToken() instead.
+            }
+    },[user])
     return (
         <div className="edu-breadcrumb-area">
             <div className="container">
@@ -46,9 +65,16 @@ const Personal = ({ title, subtitle }) => {
                                 flexDirection:'column',
                                 alignItems:'flex-start'
                             }}>
-                                <li style={{color:'black'}}>Tên: </li>
-                                <li style={{color:'black'}}>Email: </li>
+                                <li style={{color:'black'}}>Tên: {displayName}</li>
+                                <li style={{color:'black'}}>Email: {email}</li>
                             </ul>
+                            <div className='Logout'>
+                                <button style={{
+                                    color:'white',
+                                    background:'#FF4546',
+                                    border:'dash 2px white'
+                                }}>Logout</button>
+                            </div>
                         </div>
                     </div>
 

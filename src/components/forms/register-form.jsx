@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
 
-const RegisterForm = (user) => {
+const RegisterForm = () => {
     const auth = getAuth();
     const [showPass, setShowPass] = useState(false);
     // register With Email Password
@@ -17,15 +17,24 @@ const RegisterForm = (user) => {
         initialValues: { name: '', email: '', password: '', terms: false },
         validationSchema: registerSchema,
         onSubmit: (values, { resetForm }) => {
-            /*registerWithEmailPassword(values.email, values.password, values.name)*/
-            createUserWithEmailAndPassword(auth,values.email,values.password,values.name)
+            registerWithEmailPassword(values.email, values.password, values.name)
+            /*createUserWithEmailAndPassword(auth,values.email,values.password,values.name)
             .then((userCredential) => {
                 user(userCredential.user);
             })
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
-            })
+            })*/
+            updateProfile(auth.currentUser, {
+                displayName: values.name
+              }).then(() => {
+                // Profile updated!
+                // ...
+              }).catch((error) => {
+                // An error occurred
+                // ...
+              });
             resetForm()
         }
     })
@@ -50,6 +59,17 @@ const RegisterForm = (user) => {
             </div>
             {touched.password && <ErrorMsg error={errors.password} />}
 
+            <div className="form-group chekbox-area">
+                <div className="edu-form-check">
+                    <input value={values.terms} onChange={handleChange} onBlur={handleBlur} type="checkbox" name='terms' id="terms-condition" />
+                    <label htmlFor="terms-condition">I agree the User Agreement and
+                        <Link href="/terms-condition">
+                            Terms & Condition.
+                        </Link>
+                    </label>
+                </div>
+            </div>
+            {touched.terms && <ErrorMsg error={errors.terms?.split('true,')[1]} />}
             
             <div className="form-group">
                 <button type="submit" className="edu-btn btn-medium">Create Account <i className="icon-4"></i></button>
