@@ -2,9 +2,9 @@ import * as Yup from 'yup';
 
 export const registerSchema = Yup.object().shape({
     name: Yup.string().required().label('Name'),
-    phoneNumber: Yup.string().required().label('Age'),
     email: Yup.string().required().email().label('Email'),
     password: Yup.string().required().min(6).label('Password'),
+    age: Yup.string().required().label('Age'),
     terms: Yup.bool().oneOf([true], 'You need to accept the terms and conditions').label('Terms'),
   });
 
