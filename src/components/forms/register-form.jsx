@@ -16,10 +16,10 @@ const RegisterForm = () => {
     const { registerWithEmailPassword } = useFirebase();
     // use formik
     const { handleChange, handleSubmit, handleBlur, errors, values, touched } = useFormik({
-        initialValues: { name: '', email: '', password: '', age: '',terms: true },
+        initialValues: { name: '', email: '', password: '', phoneNumber: '',terms: true },
         validationSchema: registerSchema,
         onSubmit: (values, { resetForm }) => {
-            registerWithEmailPassword(values.email, values.password, values.age,values.name)
+            registerWithEmailPassword(values.email, values.password,values.name,values.phoneNumber)
             /*createUserWithEmailAndPassword(auth,values.email,values.password,values.name)
             .then((userCredential) => {
                 user(userCredential.user);
@@ -49,9 +49,9 @@ const RegisterForm = () => {
             </div>
 
             <div className="form-group">
-                <label htmlFor="log-age">Độ tuổi của bạn*</label>
-                <input value={values.age} onChange={handleChange} onBlur={handleBlur} type="text" name="Tuổi của bạn" id="log-age" placeholder="Tuổi của bạn" />
-                {touched.age && <ErrorMsg error={errors.age} />}
+                <label htmlFor="log-phoneNumber">Độ tuổi của bạn*</label>
+                <input value={values.phoneNumber} onChange={handleChange} onBlur={handleBlur} type="text" name="Tuổi của bạn" id="log-phoneNumber" placeholder="Tuổi của bạn" />
+                {touched.phoneNumber && <ErrorMsg error={errors.phoneNumber} />}
             </div>
 
             <div className="form-group">

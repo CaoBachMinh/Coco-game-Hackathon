@@ -17,7 +17,7 @@ const useFirebase = () => {
     // dispatch
     const dispatch = useDispatch()
     // register With Email Password
-    const registerWithEmailPassword = (email, password, name) => {
+    const registerWithEmailPassword = (email, password, name,phoneNumber) => {
         createUserWithEmailAndPassword(auth, email, password)
         .then((user) => {
             updateProfile(auth.currentUser, {
@@ -27,6 +27,7 @@ const useFirebase = () => {
             });
             dispatch(add_user({
                 name: name,
+                phoneNumber: phoneNumber,
                 email: user.user.email,
                 uid: user.user.uid
             }))
