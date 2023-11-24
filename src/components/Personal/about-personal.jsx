@@ -37,7 +37,10 @@ const Personal = ({ title }) => {
                     <div className="page-title">
                         <h1 className="title">{title}</h1>
                     </div>
-                    <div className="row">
+                    
+                    <div className="row" style={{
+                        marginTop: '60px'
+                    }}>
                         <div className="col-lg-4">
                             {/* First Card */}
                             <div className="card mb-4">
@@ -90,54 +93,114 @@ const Personal = ({ title }) => {
                                     <div className="row" style={{
                                         flexWrap: 'wrap',
                                         display: 'flex',
-                                        marginTop: 'calc(-1*var(0))',
+                                        marginTop: '1rem',
                                         marginLeft: 'calc(-0.5*var(1.5rem))',
                                         marginRight: 'calc(-0.5*var(1.5rem))',
                                         boxSizing: 'border-box',
                                         
                                     }}>
-                                        <div className="col-sm-3">
-                                            <p className="mb-0" style={{marginBottom: '0 !important'}}>Full Name</p>
+                                        <div className="col-sm-3" style={{
+                                            paddingLeft: '1.5rem',
+                                            marginTop: '0',
+                                            maxWidth: '100%',
+                                            paddingRight: '1.5rem',
+                                            textAlign: 'left'
+                                        }}>
+                                            <p className="mb-0" style={{marginBottom: '0', color: 'white'}}>Email của bạn:</p>
                                         </div>
-                                        <div className="col-sm-9">
-                                            <p className="text-muted mb-0" style={{
-                                                color: 'rgba(255, 255, 255, 0.75) !important',
-                                                marginBottom: '0 !important',
-                                            }}>Johnatan Smith</p>
+                                        <div className="col-sm-9" style={{
+                                            paddingLeft: '0.05rem',
+                                            marginTop: '0',
+                                            maxWidth: '100%',
+                                            paddingRight: '1.5rem'
+                                        }}>
+                                            <p className="mb-0" style={{
+                                                marginBottom: '0',
+                                                color: 'rgba(255, 255, 255, 0.75)',
+                                                
+                                            }}>{email}</p>
                                         </div>
                                     </div>
                                     <hr />
 
-                                    {/* Add other details as needed */}
-                                </div>
-                            </div>
-
-                            {/* Fourth Card */}
-                            <div className="row">
-                                <div className="col-md-6">
-                                    <div className="card mb-4 mb-md-0">
-                                        {/* Card Body */}
-                                        <div className="card-body">
-                                            <p className="mb-4">
-                                                <span className="text-primary font-italic me-1">assigment</span> Project Status
-                                            </p>
-                                            {/* Add project status details as needed */}
+                                    <div className="row" style={{
+                                        flexWrap: 'wrap',
+                                        display: 'flex',
+                                        marginTop: '1rem',
+                                        marginLeft: 'calc(-0.5*var(1.5rem))',
+                                        marginRight: 'calc(-0.5*var(1.5rem))',
+                                        boxSizing: 'border-box',
+                                        
+                                    }}>
+                                        <div className="col-sm-3" style={{
+                                            paddingLeft: '1.5rem',
+                                            marginTop: '0',
+                                            maxWidth: '100%',
+                                            paddingRight: '1.5rem',
+                                            textAlign: 'left'
+                                        }}>
+                                            <p className="mb-0" style={{marginBottom: '0', color: 'white'}}>Ngày tạo tài khoản:</p>
+                                        </div>
+                                        <div className="col-sm-9" style={{
+                                            paddingLeft: '0.05rem',
+                                            marginTop: '0',
+                                            maxWidth: '100%',
+                                            paddingRight: '1.5rem'
+                                        }}>
+                                            <p className="mb-0" style={{
+                                                marginBottom: '0',
+                                                color: 'rgba(255, 255, 255, 0.75)',
+                                            
+                                            }}>{email}</p>
                                         </div>
                                     </div>
+                                    <hr/>
+                                    <div className="row" style={{
+                                        flexWrap: 'wrap',
+                                        display: 'flex',
+                                        marginTop: '1rem',
+                                        marginLeft: 'calc(-0.5*var(1.5rem))',
+                                        marginRight: 'calc(-0.5*var(1.5rem))',
+                                        boxSizing: 'border-box',
+                                        
+                                    }}>
+                                        <div className="col-sm-3" style={{
+                                            paddingLeft: '1.5rem',
+                                            marginTop: '0',
+                                            maxWidth: '100%',
+                                            textAlign: 'left'
+                                        }}>
+                                            <p className="mb-0" style={{marginBottom: '0', color: 'white'}}>Thời gian bạn đã chơi:</p>
+                                        </div>
+                                        <div className="col-sm-9" style={{
+                                            paddingLeft: '0.05rem',
+                                            marginTop: '0',
+                                            maxWidth: '100%',
+                                            paddingRight: '1.5rem'
+                                        }}>
+                                            <p className="mb-0" style={{
+                                                marginBottom: '0',
+                                                color: 'rgba(255, 255, 255, 0.75)',
+                                            
+                                            }}>{email}</p>
+                                        </div>
+                                    </div>
+                                    <hr/>
+                                    {/* Add other details as needed */}
                                 </div>
-                            </div>
+                            </div>                            
                         </div>
                     </div>
-                    <div className='Logout'>
+                    <div className='Logout' style={{marginTop: '20px'}}>
                         <Link href='/'>
                             <button onClick={logout} style={{
-                                width: '100px',
+                                width: '190px',
                                 height: '40px',
                                 color: 'white',
                                 background: '#FF4546',
                                 border: 'none 2px white',
                                 borderRadius: '20px',
-                            }}>Đăng xuất</button>
+                            }}>Đăng xuất tài khoản</button>
                         </Link>
                     </div>
 
