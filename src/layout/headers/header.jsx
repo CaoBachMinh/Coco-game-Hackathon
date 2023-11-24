@@ -78,7 +78,6 @@ const Header = ({ header_style, no_top_bar, disable_full_width, disable_category
                                             transform:'translate(-50px)',
                                             border:'solid 3px black'
                                         }}/>
-
                                     </Link>
                                 )}
                                 {isSignOut && (
