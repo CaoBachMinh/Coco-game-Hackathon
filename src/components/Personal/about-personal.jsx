@@ -52,12 +52,12 @@ const Personal = ({ title}) => {
                         <div className='Photo' style={{
                             width:'300px',
                             height:'300px',
-                            border: 'solid 2px black',
                             borderRadius: '100%',
                         }}>
-                            <img alt='photo' style={{
+                            <img src='/assets/images/rabbit.jpg' alt='photo' style={{
                                 width:'300px',
                                 height:'300px',
+                                border: 'solid 2px black',
                                 borderRadius: '100%',
                             }}></img>
                         </div>

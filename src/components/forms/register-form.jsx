@@ -62,7 +62,9 @@ const RegisterForm = () => {
             
             
             <div className="form-group">
-                <button type="submit" className="edu-btn btn-medium">Create Account <i className="icon-4"></i></button>
+                <Link href='/'>
+                    <button type="submit" className="edu-btn btn-medium">Create Account <i className="icon-4"></i></button>
+                </Link>
             </div>
         </form>
     );

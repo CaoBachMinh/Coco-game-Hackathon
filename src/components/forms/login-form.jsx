@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { useFormik } from 'formik';
 import useFirebase from '../../hooks/use-firebase';
 import { loginSchema } from '../../utils/validation-schema';
@@ -73,7 +74,9 @@ const LoginForm = () => {
             </div>
 
             <div className="form-group">
-                <button type="submit" className="edu-btn btn-medium">Sign in <i className="icon-4"></i></button>
+                <Link href='/'>
+                    <button type="submit" className="edu-btn btn-medium">Sign in <i className="icon-4"></i></button>
+                </Link>
             </div>
         </form>
     )
