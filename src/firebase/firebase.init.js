@@ -18,4 +18,5 @@ function firebaseInitialization() {
 }
 
 
+
 export default firebaseInitialization;

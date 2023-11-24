@@ -14,7 +14,7 @@ const RegisterForm = () => {
     const { registerWithEmailPassword } = useFirebase();
     // use formik
     const { handleChange, handleSubmit, handleBlur, errors, values, touched } = useFormik({
-        initialValues: { name: '', email: '', password: '', terms: false },
+        initialValues: { name: '', email: '', password: '', terms: true },
         validationSchema: registerSchema,
         onSubmit: (values, { resetForm }) => {
             registerWithEmailPassword(values.email, values.password, values.name)
@@ -59,17 +59,7 @@ const RegisterForm = () => {
             </div>
             {touched.password && <ErrorMsg error={errors.password} />}
 
-            <div className="form-group chekbox-area">
-                <div className="edu-form-check">
-                    <input value={values.terms} onChange={handleChange} onBlur={handleBlur} type="checkbox" name='terms' id="terms-condition" />
-                    <label htmlFor="terms-condition">I agree the User Agreement and
-                        <Link href="/terms-condition">
-                            Terms & Condition.
-                        </Link>
-                    </label>
-                </div>
-            </div>
-            {touched.terms && <ErrorMsg error={errors.terms?.split('true,')[1]} />}
+            
             
             <div className="form-group">
                 <button type="submit" className="edu-btn btn-medium">Create Account <i className="icon-4"></i></button>

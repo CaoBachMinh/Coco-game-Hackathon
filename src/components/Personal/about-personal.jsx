@@ -2,9 +2,10 @@ import Link from 'next/link';
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useMouseMoveUI } from '../../contexts/mouse-move-context';
-import { getAuth } from 'firebase/auth';
+import { getAuth,signOut } from 'firebase/auth';
 import { useState } from 'react';
 import { useEffect } from 'react';
+
 
 const auth = getAuth();
 const Personal = ({ title}) => {
@@ -17,13 +18,20 @@ const Personal = ({ title}) => {
             if (user !== null) {
                 setDisplayName(user.displayName);
                 setEmail(user.email);
-                
-            
                 // The user's ID, unique to the Firebase project. Do NOT use
                 // this value to authenticate with your backend server, if
                 // you have one. Use User.getToken() instead.
             }
     },[user])
+
+    const logout = () => {
+        signOut(auth).then(() => {
+            console.log('SignOut successful')
+          }).catch((error) => {
+            console.log('SignOut Unsuccessful')
+            // An error happened.
+          });
+    };
     return (
         <div className="edu-breadcrumb-area">
             <div className="container">
@@ -69,11 +77,16 @@ const Personal = ({ title}) => {
                                 <li style={{color:'black'}}>Email: {email}</li>
                             </ul>
                             <div className='Logout'>
-                                <button style={{
-                                    color:'white',
-                                    background:'#FF4546',
-                                    border:'dash 2px white'
-                                }}>Logout</button>
+                                <Link href='/'>
+                                    <button onClick={logout} style={{
+                                        width:'100px',
+                                        height:'40px',
+                                        color:'white',
+                                        background:'#FF4546',
+                                        border:'none 2px white',
+                                        borderRadius:'20px',
+                                    }}>Đăng xuất</button>
+                                </Link>
                             </div>
                         </div>
                     </div>
