@@ -13,10 +13,16 @@ const firebaseConfig = {
     measurementId: "G-1SR1WYCJRM"
 };
 
-function firebaseInitialization() {
+/*function firebaseInitialization() {
     initializeApp(firebaseConfig);
-}
+}*/
 
 
+// Initialize Firebase
+const firebaseInitialization = initializeApp(firebaseConfig);
 
+// Initialize Firebase Authentication and get a reference to the service
+export const auth = getAuth(firebaseInitialization);
 export default firebaseInitialization;
+
+

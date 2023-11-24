@@ -6,9 +6,11 @@ import { loginSchema } from '../../utils/validation-schema';
 import ErrorMsg from './error-msg';
 import { useState } from 'react';
 import { getAuth, signInWithEmailAndPassword,updateProfile } from 'firebase/auth';
+import { useRouter } from 'next/router';
 
 
 const LoginForm = () => {
+    const router = useRouter();
     const auth = getAuth(); 
     const [showPass,setShowPass] = useState(false);
     // use firebase 
@@ -32,6 +34,7 @@ const LoginForm = () => {
         }
     })
 
+
     // handleResetPass
     const handleResetPass = (email) => {
         resetPassword(email);
@@ -39,14 +42,14 @@ const LoginForm = () => {
     return (
         <form onSubmit={handleSubmit}>
             <div className="form-group">
-                <label htmlFor="current-log-email">Tên đăng nhập hoặc Email*</label>
+                <label htmlFor="current-log-email">Email*</label>
                 <input 
                     value={values.email} 
                     onChange={handleChange}
                     onBlur={handleBlur} 
                     type="email" 
                     name="email"
-                    placeholder="Email or username" 
+                    placeholder="Email" 
                 />
                 {touched.email && <ErrorMsg error={errors.email} />}
             </div>
@@ -74,9 +77,9 @@ const LoginForm = () => {
             </div>
 
             <div className="form-group">
-                <Link href='/'>
-                    <button type="submit" className="edu-btn btn-medium">Sign in <i className="icon-4"></i></button>
-                </Link>
+                
+                    <button onClick={() => router.push('/')} type="submit" className="edu-btn btn-medium">Sign in <i className="icon-4"></i></button>
+                
             </div>
         </form>
     )

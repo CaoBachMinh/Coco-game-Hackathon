@@ -6,8 +6,10 @@ import ErrorMsg from './error-msg';
 import Link from 'next/link';
 import { useState } from 'react';
 import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
+import { useRouter } from 'next/router';
 
 const RegisterForm = () => {
+    const router = useRouter();
     const auth = getAuth();
     const [showPass, setShowPass] = useState(false);
     // register With Email Password
@@ -47,8 +49,8 @@ const RegisterForm = () => {
             </div>
 
             <div className="form-group">
-                <label htmlFor="log-email">Tên đăng nhập hoặc Email*</label>
-                <input value={values.email} onChange={handleChange} onBlur={handleBlur} type="email" name="email" id="log-email" placeholder="Email or username" />
+                <label htmlFor="log-email">Email*</label>
+                <input value={values.email} onChange={handleChange} onBlur={handleBlur} type="email" name="email" id="log-email" placeholder="Email" />
                 {touched.email && <ErrorMsg error={errors.email} />}
             </div>
 
@@ -62,9 +64,9 @@ const RegisterForm = () => {
             
             
             <div className="form-group">
-                <Link href='/'>
-                    <button type="submit" className="edu-btn btn-medium">Create Account <i className="icon-4"></i></button>
-                </Link>
+                
+                    <button onClick={() => router.push('/')} type="submit" className="edu-btn btn-medium">Tạo Tài Khoản<i className="icon-4"></i></button>
+                
             </div>
         </form>
     );

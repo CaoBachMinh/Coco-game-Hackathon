@@ -10,14 +10,37 @@ import { wishlistItems } from '../../redux/features/wishlist-slice';
 import useCartInfo from '../../hooks/use-cart-info';
 import OffCanvas from '../../components/common/sidebar/off-canvas';
 import Cart from './component/cart';
+import { getAuth,onAuthStateChanged } from 'firebase/auth';
+import { useEffect } from 'react';
+import { auth } from '../../firebase/firebase';
 
 
 const Header = ({ header_style, no_top_bar, disable_full_width, disable_category }) => {
     const { sticky } = useSticky();
-    const { quantity } = useCartInfo();
-    const wishlists = useSelector(wishlistItems);
     const [isSearchOpen, setIsSearchOpen] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
+    const [isSignIn,setIsSignIn] = useState(true);
+    const [isSignOut,setIsSignOut] = useState(false);
+
+    useEffect(() => {
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+              // User is signed in, see docs for a list of available properties
+              // https://firebase.google.com/docs/reference/js/auth.user
+              const uid = user.uid;
+              setIsSignIn(true);
+              setIsSignOut(false);
+              // ...
+              console.log('Sign In');
+            } else {
+                console.log('Sign Out')
+                setIsSignIn(false);
+                setIsSignOut(true);
+              // User is signed out
+              // ...
+            }
+          });
+    })
 
     return <>
         <header className={`edu-header header-style-${header_style ? header_style : '1'} ${disable_full_width ? 'disbale-header-fullwidth' : 'header-fullwidth'} ${no_top_bar ? 'no-topbar' : ''}`}>
@@ -45,11 +68,30 @@ const Header = ({ header_style, no_top_bar, disable_full_width, disable_category
                         </div>
 
                         <div className='header-top'>
-                            <ul className="header-info" >
-                                <li><Link href="/personal">Personal</Link></li>
-                                <li><Link href="/sign-in">Đăng nhập</Link></li>
-                                <li><Link href="/sign-in">Đăng kí</Link></li>
-                            </ul>
+                            <div className="header-info" >
+                                {isSignIn && (
+                                    <Link href="/personal">
+                                        <img src='/assets/images/rabbit.jpg' style={{
+                                            width:'70px',
+                                            height:'70px',
+                                            borderRadius:'20px',
+                                            transform:'translate(-50px)',
+                                            border:'solid 3px black'
+                                        }}/>
+
+                                    </Link>
+                                )}
+                                {isSignOut && (
+                                    <ul>
+                                        <li style={{
+                                            transform: 'translate(0px,15px)'
+                                        }}><Link href="/sign-in">Đăng nhập</Link></li>
+                                        <li style={{
+                                            transform: 'translate(0px,15px)'
+                                        }}><Link href="/sign-in">Đăng kí</Link></li>
+                                    </ul>
+                                )}
+                            </div>
                         </div>
 
                         {/* <div className="header-right">

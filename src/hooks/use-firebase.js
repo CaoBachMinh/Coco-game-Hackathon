@@ -4,11 +4,11 @@ import {
 } from "firebase/auth";
 import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
-import firebaseInitialization from "../firebase/firebase.init";
+import firebaseInitialization from "../firebase/firebase";
 import { add_user, sign_out, user_info } from "../redux/features/auth-slice";
 
 // initialize firebase app
-firebaseInitialization();
+
 
 // declare auth
 const auth = getAuth();
