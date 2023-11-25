@@ -34,20 +34,20 @@ const instructors_data = [
             {link: 'https://www.linkedin.com/', target: '_blank', icon: 'icon-linkedin2'}
         ],
         name:'Trần Thanh Nhân',
-        title:'Leader',
+        title:'',
         delay:'150',
         sm_text:"THPT Phan Châu Trinh"
     },
     {
         id:4,
-        img:'team-04.webp',
+        img:'team-01.webp',
         social_links:[
             {link: 'http://facebook.com', target: '_blank', icon: 'icon-facebook'},
             {link: 'http://twitter.com', target: '_blank', icon: 'icon-twitter'},
             {link: 'https://www.linkedin.com/', target: '_blank', icon: 'icon-linkedin2'}
         ],
         name:'Cao Thái Minh',
-        title:'Main Developer',
+        title:'',
         delay:'200',
         sm_text:"THPT Phan Châu Trinh"
     },

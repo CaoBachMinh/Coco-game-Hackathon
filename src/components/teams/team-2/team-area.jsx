@@ -21,7 +21,6 @@ const TeamArea = () => {
 				<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
 					<Link href="/team-1" className="edu-btn">
                         Tìm hiểu thêm<i className="icon-4"></i>
-
                     </Link>
 				</div>
 			</div>
