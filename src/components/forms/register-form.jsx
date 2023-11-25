@@ -19,7 +19,7 @@ const RegisterForm = () => {
         initialValues: { name: '', email: '', password: '', age: '',terms: true },
         validationSchema: registerSchema,
         onSubmit: (values, { resetForm }) => {
-            registerWithEmailPassword(values.email, values.password,values.name,values.age)
+            registerWithEmailPassword(values.email, values.password,values.name)
             /*createUserWithEmailAndPassword(auth,values.email,values.password,values.name)
             .then((userCredential) => {
                 user(userCredential.user);

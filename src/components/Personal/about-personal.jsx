@@ -5,6 +5,8 @@ import { useMouseMoveUI } from '../../contexts/mouse-move-context';
 import { getAuth, signOut } from 'firebase/auth';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { set } from 'lodash';
+
 const auth = getAuth();
 const Personal = ({ title }) => {
     const user = auth.currentUser;
@@ -18,12 +20,12 @@ const Personal = ({ title }) => {
             setDisplayName(user.displayName);
             setEmail(user.email);
             setDay(user.metadata.creationTime);
+            
             // The user's ID, unique to the Firebase project. Do NOT use
             // this value to authenticate with your backend server, if
             // you have one. Use User.getToken() instead.
         }
     }, [user])
-
     const logout = () => {
         signOut(auth).then(() => {
             console.log('SignOut successful')
@@ -60,7 +62,7 @@ const Personal = ({ title }) => {
                                 }}>
                                     <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"
                                         class="rounded-circle img-fluid" style={{width: '150px', alignItems: 'center',display: 'flex'}}></img>
-                                    <h5 className="my-3" style={{marginTop:'20px'}}>{displayName}</h5>
+                                    <h5 className="my-3" style={{color:'white',marginTop:'20px'}}>{displayName}</h5>
                                     
                                 </div>
                             </div>
@@ -144,7 +146,7 @@ const Personal = ({ title }) => {
                                                 marginBottom: '0',
                                                 color: 'rgba(255, 255, 255, 0.75)',
 
-                                            }}>{email}</p>
+                                            }}>{age}</p>
                                         </div>
                                     </div>
                                     <hr />
