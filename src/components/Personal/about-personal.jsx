@@ -53,7 +53,7 @@ const Personal = ({ title }) => {
                                     position: 'relative',
                                     display: 'flex',
                                     flexDirection: 'column',
-                                    backgroundColor: '#1c242f',
+                                    backgroundColor: 'white',
                                     borderRadius: '0.5rem',
                                     boxShadow: '0 10px 40px 0 rgba(0,0,0,.08)',
                                     backgroundClip: "border-box",
@@ -62,7 +62,7 @@ const Personal = ({ title }) => {
                                 }}>
                                     <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"
                                         class="rounded-circle img-fluid" style={{width: '150px', alignItems: 'center',display: 'flex'}}></img>
-                                    <h5 className="my-3" style={{color:'white',marginTop:'20px'}}>{displayName}</h5>
+                                    <h5 className="my-3" style={{color:'dark',marginTop:'20px'}}>{displayName}</h5>
                                     
                                 </div>
                             </div>
@@ -77,7 +77,7 @@ const Personal = ({ title }) => {
                                 display: 'flex',
                                 flexDirection: 'column',
                                 color: '#fff',
-                                backgroundColor: '#1c242f',
+                                backgroundColor: '#white',
                                 backgroundClip: 'border-box',
                                 borderRadius: '0.5rem',
                                 boxShadow: '0 10px 40px 0 rgba(0,0,0,.08)',
@@ -102,7 +102,7 @@ const Personal = ({ title }) => {
                                             paddingRight: '1.5rem',
                                             textAlign: 'left'
                                         }}>
-                                            <p className="mb-0" style={{ marginBottom: '0', color: 'white' }}>Email của bạn:</p>
+                                            <p className="mb-0" style={{ marginBottom: '0', color: 'dark' }}>Email của bạn:</p>
                                         </div>
                                         <div className="col-sm-9" style={{
                                             paddingLeft: '0.05rem',
@@ -112,7 +112,7 @@ const Personal = ({ title }) => {
                                         }}>
                                             <p className="mb-0" style={{
                                                 marginBottom: '0',
-                                                color: 'rgba(255, 255, 255, 0.75)',
+                                                color: '#181818',
 
                                             }}>{email}</p>
                                         </div>
@@ -134,7 +134,7 @@ const Personal = ({ title }) => {
                                             maxWidth: '100%',
                                             textAlign: 'left'
                                         }}>
-                                            <p className="mb-0" style={{ marginBottom: '0', color: 'white' }}>Độ tuổi của bạn:</p>
+                                            <p className="mb-0" style={{ marginBottom: '0', color: 'dark' }}>Độ tuổi của bạn:</p>
                                         </div>
                                         <div className="col-sm-9" style={{
                                             paddingLeft: '0.05rem',
@@ -166,7 +166,7 @@ const Personal = ({ title }) => {
                                             paddingRight: '1.5rem',
                                             textAlign: 'left'
                                         }}>
-                                            <p className="mb-0" style={{ marginBottom: '0', color: 'white' }}>Ngày tạo tài khoản:</p>
+                                            <p className="mb-0" style={{ marginBottom: '0', color: 'dark' }}>Ngày tạo tài khoản:</p>
                                         </div>
                                         <div className="col-sm-9" style={{
                                             paddingLeft: '0.05rem',
@@ -176,7 +176,7 @@ const Personal = ({ title }) => {
                                         }}>
                                             <p className="mb-0" style={{
                                                 marginBottom: '0',
-                                                color: 'rgba(255, 255, 255, 0.75)',
+                                                color: '#181818',
 
                                             }}>{day}</p>
                                         </div>
@@ -197,7 +197,7 @@ const Personal = ({ title }) => {
                                             maxWidth: '100%',
                                             textAlign: 'left'
                                         }}>
-                                            <p className="mb-0" style={{ marginBottom: '0', color: 'white' }}>Thời gian bạn đã chơi:</p>
+                                            <p className="mb-0" style={{ marginBottom: '0', color: 'dark' }}>Thời gian bạn đã chơi:</p>
                                         </div>
                                         <div className="col-sm-9" style={{
                                             paddingLeft: '0.05rem',
@@ -207,9 +207,9 @@ const Personal = ({ title }) => {
                                         }}>
                                             <p className="mb-0" style={{
                                                 marginBottom: '0',
-                                                color: 'rgba(255, 255, 255, 0.75)',
+                                                color: '#181818',
 
-                                            }}>{email}</p>
+                                            }}>N/A</p>
                                         </div>
                                     </div>
                                     <hr />
