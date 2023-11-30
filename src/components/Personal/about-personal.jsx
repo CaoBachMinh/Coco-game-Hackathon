@@ -6,19 +6,22 @@ import { getAuth, signOut } from 'firebase/auth';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { set } from 'lodash';
-
+import {getDoc,doc } from "firebase/firestore"; 
+import {db} from '../../firebase/firebase';
 const auth = getAuth();
 const Personal = ({ title }) => {
     const user = auth.currentUser;
+    console.log(user.uid);
     const { mouseDirection, mouseReverse } = useMouseMoveUI();
     const [displayName, setDisplayName] = useState(null);
     const [email, setEmail] = useState(null);
     const [day, setDay] = useState(null);
     const [age,setAge] = useState(null);
+   
     useEffect(() => {
         if (user !== null) {
             setDisplayName(user.displayName);
-            setEmail(user.email);
+            setEmail(user.email);   
             setDay(user.metadata.creationTime);
             
             // The user's ID, unique to the Firebase project. Do NOT use

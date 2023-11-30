@@ -1,6 +1,7 @@
 import {initializeApp} from "firebase/app";
 import { getAuth } from "firebase/auth";
-import firebase from "firebase/compat/app";
+import { getFirestore } from "firebase/firestore";
+
 import "firebase/compat/auth";
 
 const firebaseConfig = {
@@ -22,7 +23,9 @@ const firebaseConfig = {
 const firebaseInitialization = initializeApp(firebaseConfig);
 
 // Initialize Firebase Authentication and get a reference to the service
+const db = getFirestore(firebaseInitialization);
+
 export const auth = getAuth(firebaseInitialization);
-export default firebaseInitialization;
+export default {firebaseInitialization,db};
 
 

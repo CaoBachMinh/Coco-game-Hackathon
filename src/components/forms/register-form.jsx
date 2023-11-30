@@ -5,41 +5,37 @@ import { registerSchema } from '../../utils/validation-schema';
 import ErrorMsg from './error-msg';
 import Link from 'next/link';
 import { useState } from 'react';
-import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
+import { getAuth,updateProfile } from 'firebase/auth';
 import { useRouter } from 'next/router';
+import {db,firebaseInitialization} from '../../firebase/firebase';
+
 
 const RegisterForm = () => {
     const router = useRouter();
-    const auth = getAuth();
+    const auth = getAuth(firebaseInitialization);
     const [showPass, setShowPass] = useState(false);
     // register With Email Password
     const { registerWithEmailPassword } = useFirebase();
     // use formik
     const { handleChange, handleSubmit, handleBlur, errors, values, touched } = useFormik({
-        initialValues: { name: '', email: '', password: '', age: '',terms: true },
+        initialValues: { name: '', email: '', password: '',age:'',terms: true },
         validationSchema: registerSchema,
         onSubmit: (values, { resetForm }) => {
-            registerWithEmailPassword(values.email, values.password,values.name)
-            /*createUserWithEmailAndPassword(auth,values.email,values.password,values.name)
-            .then((userCredential) => {
-                user(userCredential.user);
-            })
-            .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-            })*/
+            registerWithEmailPassword(values.email, values.password,values.name,values.age)
             updateProfile(auth.currentUser, {
                 displayName: values.name
               }).then(() => {
                 // Profile updated!
                 // ...
-              }).catch((error) => {
+              })
+              .catch((error) => {
                 // An error occurred
                 // ...
               });
             resetForm()
         }
     })
+
     return (
         <form onSubmit={handleSubmit}>
             <div className="form-group">
@@ -50,7 +46,7 @@ const RegisterForm = () => {
 
             <div className="form-group">
                 <label htmlFor="log-age">Độ tuổi của bạn*</label>
-                <input value={values.age} onChange={handleChange} onBlur={handleBlur} type="text" name="age" id="log-phoneNumber" placeholder="Tuổi của bạn" />
+                <input value={values.age} onChange={handleChange} onBlur={handleBlur} type="text" name="age" id="log-age" placeholder="Tuổi của bạn" />
                 {touched.age && <ErrorMsg error={errors.age} />}
             </div>
 
