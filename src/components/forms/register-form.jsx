@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { getAuth,updateProfile } from 'firebase/auth';
 import { useRouter } from 'next/router';
-import {db,firebaseInitialization} from '../../firebase/firebase';
+import {firebaseInitialization} from '../../firebase/firebase';
 
 
 const RegisterForm = () => {
