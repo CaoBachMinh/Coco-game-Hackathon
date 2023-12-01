@@ -5,10 +5,11 @@ import { useMouseMoveUI } from '../../contexts/mouse-move-context';
 import { getAuth, signOut } from 'firebase/auth';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import { set } from 'lodash';
 import {getDoc,doc } from "firebase/firestore"; 
 import {db} from '../../firebase/firebase';
 const auth = getAuth();
+
+
 const Personal = ({ title }) => {
     const user = auth.currentUser;
     const { mouseDirection, mouseReverse } = useMouseMoveUI();
@@ -18,15 +19,28 @@ const Personal = ({ title }) => {
     const [age,setAge] = useState(null);
    
     useEffect(() => {
-        if (user !== null) {
-            setDisplayName(user.displayName);
-            setEmail(user.email);   
-            setDay(user.metadata.creationTime);
-            
-            // The user's ID, unique to the Firebase project. Do NOT use
-            // this value to authenticate with your backend server, if
-            // you have one. Use User.getToken() instead.
+        const fetchData = async() =>{
+            if (user !== null) {
+                setDisplayName(user.displayName);
+                setEmail(user.email);   
+                setDay(user.metadata.creationTime);
+                
+                // The user's ID, unique to the Firebase project. Do NOT use
+                // this value to authenticate with your backend server, if
+                // you have one. Use User.getToken() instead.
+                try{
+                    const userDocRef = doc(db,'user', user.uid);
+                    const userDoc = await getDoc(userDocRef);
+                    if (userDoc.exists()){
+                        const userData = userDoc.data();
+                        setAge(userData.age);
+                    }
+                } catch(error){
+                    console.error('Error fetching user data:', error);
+                }
+            };
         }
+        fetchData();
     }, [user])
     const logout = () => {
         signOut(auth).then(() => {
@@ -146,7 +160,7 @@ const Personal = ({ title }) => {
                                         }}>
                                             <p className="mb-0" style={{
                                                 marginBottom: '0',
-                                                color: 'rgba(255, 255, 255, 0.75)',
+                                                color: '#181818',
 
                                             }}>{age}</p>
                                         </div>
