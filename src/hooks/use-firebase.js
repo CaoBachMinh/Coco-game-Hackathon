@@ -5,13 +5,12 @@ import {
 import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
 import { add_user, sign_out, user_info } from "../redux/features/auth-slice";
-import { doc, setDoc, collection,getFirestore } from "firebase/firestore"; 
-import {firebaseInitialization,auth} from '../firebase/firebase';
+import { doc, setDoc, collection} from "firebase/firestore"; 
+import {db,auth} from '../firebase/firebase';
 // initialize firebase app
 
 
 // declare auth
-const db = getFirestore(firebaseInitialization);
 
 const useFirebase = () => {
     // dispatch

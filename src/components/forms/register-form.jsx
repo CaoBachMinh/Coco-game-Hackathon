@@ -7,12 +7,12 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { getAuth,updateProfile } from 'firebase/auth';
 import { useRouter } from 'next/router';
-import {firebaseInitialization} from '../../firebase/firebase';
+import {auth} from '../../firebase/firebase';
 
 
 const RegisterForm = () => {
     const router = useRouter();
-    const auth = getAuth(firebaseInitialization);
+    
     const [showPass, setShowPass] = useState(false);
     // register With Email Password
     const { registerWithEmailPassword } = useFirebase();
