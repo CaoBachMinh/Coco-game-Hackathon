@@ -1,6 +1,6 @@
-import {initializeApp} from "firebase/compat/app";
-import { getAuth } from "firebase/compat/auth";
-import { getFirestore } from "firebase/compat/firestore";
+import "firebase/auth"
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
 
 import "firebase/compat/auth";
 
