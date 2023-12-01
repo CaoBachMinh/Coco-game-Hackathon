@@ -11,7 +11,6 @@ import {db} from '../../firebase/firebase';
 const auth = getAuth();
 const Personal = ({ title }) => {
     const user = auth.currentUser;
-    console.log(user.uid);
     const { mouseDirection, mouseReverse } = useMouseMoveUI();
     const [displayName, setDisplayName] = useState(null);
     const [email, setEmail] = useState(null);
