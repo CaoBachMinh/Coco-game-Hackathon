@@ -188,6 +188,42 @@
                 margin-bottom: 22px;
             }
         }
+        
+    }
+    &.personal-box{
+        box-shadow: 0 10px 30px 0 rgba(0,0,0,.05);
+        padding: 20px 20px 5px;
+        border-radius: 5px; 
+        background-color: var(--color-white);
+        transition: var(--transition);
+        .row {
+            flex-wrap: wrap;
+            display: flex;
+            margin-top: 1rem;
+            margin-left: calc(-0.5 * var(1.5rem)); // Use the correct variable syntax
+            margin-right: calc(-0.5 * var(1.5rem)); // Use the correct variable syntax
+            box-sizing: border-box;
+            .row-title{
+                padding-left: 1.5rem;
+                max-width: 30%;
+                margin-bottom: 0;
+                transition: var(--transition);               
+            }
+            .row-content{
+                position: absolute;
+                right: 5%;
+                display: flex;
+                justify-content: center;
+                max-width: 50%;
+            }
+        }
+    }
+    .personal-btn {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0px);
+        display: flex;
+        justify-content: center;
     }
 }
 

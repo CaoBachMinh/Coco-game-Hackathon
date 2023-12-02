@@ -42,7 +42,7 @@ const CheckoutArea = () => {
 
                     <div className="row row--25">
                         <div className="col-lg-6">
-                            <div className="checkout-billing">
+                        <div className="checkout-billing">
                                 <h3 className="title">Billing Details</h3>
                                 <div className="row g-lg-5">
                                     <div className="col-lg-6">
