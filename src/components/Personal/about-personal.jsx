@@ -21,9 +21,11 @@ const Personal = ({ title }) => {
     useEffect(() => {
         const fetchData = async () => {
             if (user !== null) {
+                const d = new Date(user.metadata.creationTime);
+                const dayCreate = `${d.getDate()}/${d.getMonth()}/${d.getFullYear()}`;
                 setDisplayName(user.displayName);
                 setEmail(user.email);
-                setDay(user.metadata.creationTime);
+                setDay(dayCreate);
 
                 // The user's ID, unique to the Firebase project. Do NOT use
                 // this value to authenticate with your backend server, if
@@ -59,8 +61,8 @@ const Personal = ({ title }) => {
                 </div>
                 <div className="row g-5 d-flex justify-content-center" style={{
                     marginTop: '60px'
-                }}>
-                    <div className="col-lg-4" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
+                }} data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
+                    <div className="col-lg-4">
                         {/* First Card */}
                         <div className="why-choose-box features-box">
                             {/* Card Body */}
@@ -128,7 +130,7 @@ const Personal = ({ title }) => {
                     </div>
                     
                 </div>
-                <div className='why-choose-box' style={{position:'relative', marginTop:'50px'}}>
+                <div className='why-choose-box' style={{position:'relative', marginTop:'50px'}} data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
                     <div className="personal-btn"  data-sal-delay="400" data-sal="slide-up" data-sal-duration="1000">
                         <Link href='/'>
                             <button className="edu-btn btn-medium" onClick={logout}>
