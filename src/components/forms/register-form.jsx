@@ -5,7 +5,7 @@ import { registerSchema } from '../../utils/validation-schema';
 import ErrorMsg from './error-msg';
 import Link from 'next/link';
 import { useState } from 'react';
-import { getAuth,updateProfile } from 'firebase/auth';
+import { updateProfile } from 'firebase/auth';
 import { useRouter } from 'next/router';
 import {auth} from '../../firebase/firebase';
 
@@ -66,9 +66,7 @@ const RegisterForm = () => {
             
             
             <div className="form-group">
-                
                     <button onClick={() => router.push('/')} type="submit" className="edu-btn btn-medium">Tạo Tài Khoản<i className="icon-4"></i></button>
-                
             </div>
         </form>
     );

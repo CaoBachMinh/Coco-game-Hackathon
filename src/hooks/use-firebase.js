@@ -1,16 +1,13 @@
 import {
-  getAuth, createUserWithEmailAndPassword, updateProfile,
+  createUserWithEmailAndPassword, updateProfile,
   signInWithEmailAndPassword, sendPasswordResetEmail,signOut
 } from "firebase/auth";
 import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
 import { add_user, sign_out, user_info } from "../redux/features/auth-slice";
-import { doc, setDoc, collection} from "firebase/firestore"; 
+import { doc, setDoc, collection,getDoc} from "firebase/firestore"; 
 import {db,auth} from '../firebase/firebase';
-// initialize firebase app
 
-
-// declare auth
 
 const useFirebase = () => {
     // dispatch
@@ -20,10 +17,8 @@ const useFirebase = () => {
         createUserWithEmailAndPassword(auth, email, password) 
         .then(async (userCredential) =>{
             const user = userCredential.user;
-            console.log(user.uid);
-            console.log(age);
             const ref = doc(collection(db, 'user'), user.uid);
-            await setDoc(ref, {age,name, email}, { merge: true });
+            await setDoc(ref, {age,name, email,password}, { merge: true });
             try {
                 await updateProfile(auth.currentUser, {
                     displayName: name,
@@ -35,7 +30,7 @@ const useFirebase = () => {
                     uid: user.uid, // Use destructured uid
                 }));
         
-                toast.success(`${name} registered successfully`, {
+                toast.success(`Chúc mừng bạn đã đăng kí thành công`, {
                     position: 'top-left',
                 });
             } catch (error) {
@@ -43,22 +38,6 @@ const useFirebase = () => {
                 // Handle error as needed
             }
         })
-
-        // .then((user) => {
-        //     updateProfile(auth.currentUser, {
-        //         displayName: name,
-        //     }).then(() => {
-        //     }).catch((error) => {
-        //     });
-        //     dispatch(add_user({
-        //         name: name,
-        //         email: user.user.email,
-        //         uid: user.user.uid,
-        //     }))
-        //     toast.success(`${name} register successfully`, {
-        //         position: 'top-left'
-        //     })
-        // })
         
         .catch((error) => {
             const errorMessage = error?.message;
@@ -114,7 +93,7 @@ const useFirebase = () => {
     const logout = () => {
         signOut(auth).then(() => {
         dispatch(sign_out())
-        toast.success(`Sign-out successful.`, {
+        toast.success(`Đăng suất thành công.`, {
             position: 'top-left'
         })
         }).catch((error) => {
@@ -122,11 +101,54 @@ const useFirebase = () => {
         });
     }
 
+    //Add data to specific user (UID)
+    const addDataUser = async (uid,field_name,field_data) => {
+        const ref = doc(collection(db, 'user'), uid);
+        try {
+            const existenceData = (await getDoc(ref)).data();
+            const userData = {
+                ...existenceData,
+                [field_name] : field_data
+            }; 
+            await setDoc(ref, userData, { merge: true });
+            toast.success(`Cập nhật thông tin thành công.`, {
+                position: 'top-left'
+            });
+        } catch (error) {
+            const errorMessage = error?.message;
+            toast.error(`${errorMessage}`, {
+                position: 'top-left'
+            });
+        }
+    };
+
+    //Get User'Data
+    const getDataUser = async (uid,dataget) =>{
+        const userDocRef = doc(db, 'user', uid);
+        const userDoc = await getDoc(userDocRef);
+        if (userDoc.exists()) {
+            const userData = userDoc.data();
+            if (userData && Object.prototype.hasOwnProperty.call(userData, dataget)) {
+                return userData[dataget];
+            } else {
+                // Return an error or a default value when dataget doesn't exist
+                console.log(`Property "${dataget}" not found in user data.`);
+                // Alternatively, you can return a default value, e.g., return null;
+            }
+        } else {
+            // Handle the case where the user document doesn't exist
+            console.log(`User document with UID ${uid} does not exist.`);
+            // Alternatively, you can return a default value or handle the case as needed
+        }
+    }
+
     return {
         registerWithEmailPassword,
         loginWithEmailPassword,
         resetPassword,
-        logout
+        logout,
+        addDataUser,
+        getDataUser
     }
 }
 

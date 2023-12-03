@@ -217,6 +217,17 @@
                 max-width: 50%;
             }
         }
+        .content {
+            .section-title {
+                margin-top: 15px;
+                margin-bottom: 22px;
+            }
+        }
+        .photo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     }
     .personal-btn {
         opacity: 1;
@@ -224,6 +235,12 @@
         transform: translateY(0px);
         display: flex;
         justify-content: center;
+        .btn-small{
+            font-size: 12;
+            height: 35px;
+            display: flex;
+            align-items: center;
+        }
     }
 }
 
