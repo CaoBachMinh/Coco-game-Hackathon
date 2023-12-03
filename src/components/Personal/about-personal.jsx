@@ -72,9 +72,19 @@ const Personal = ({ title }) => {
                             </div>
 
                             <div className="content">
-                                <h3 className="section-title section-left">{displayName}</h3>
+                                <>
+                                    {!updateProfile &&
+                                        <>
+                                            <h3 className="section-title section-left">{displayName}</h3>
+                                            <div className="personal-btn" data-sal-delay="400" data-sal="slide-up" data-sal-duration="1000">
+                                                <button className="edu-btn btn-small btn-secondary1" onClick={() => handleChangeUpdateProfile()}>
+                                                    Chỉnh sửa tài khoản
+                                                </button>
+                                            </div>
+                                        </>}
+                                </>
                                 <div className="personal-btn" data-sal-delay="400" data-sal="slide-up" data-sal-duration="1000">
-                                    <button className="edu-btn btn-small btn-secondary1" onClick={() => handleChangeUpdateProfile('title', day)}>
+                                    <button className="edu-btn btn-small btn-secondary1" onClick={() => handleChangeUpdateProfile()}>
                                         Chỉnh sửa tài khoản
                                     </button>
                                 </div>
@@ -135,7 +145,7 @@ const Personal = ({ title }) => {
                 <div className='why-choose-box' style={{ position: 'relative', marginTop: '50px' }} data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
                     <div className="personal-btn" data-sal-delay="400" data-sal="slide-up" data-sal-duration="1000">
                         <Link href='/'>
-                            <button className="edu-btn btn-medium" onClick={() => logout}>
+                            <button className="edu-btn btn-medium" onClick={() => logout()}>
                                 Đăng xuất tài khoản
                             </button>
                         </Link>
