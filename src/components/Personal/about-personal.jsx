@@ -5,11 +5,10 @@ import { useMouseMoveUI } from '../../contexts/mouse-move-context';
 import { getAuth } from 'firebase/auth';
 import { useState, useEffect } from 'react';
 import useFirebase from '../../hooks/use-firebase';
+import ProfileForm from './profileChangeMenu';
 
 const auth = getAuth();
-const DataGet = [
-    'age', 'name', 'email'
-];
+
 const Personal = ({ title }) => {
     const user = auth.currentUser;
     const { addDataUser, logout, getDataUser } = useFirebase();
@@ -42,12 +41,12 @@ const Personal = ({ title }) => {
         }
         fetchData();
     }, [user])
-    const handleAddDataUser = (title, data) => {
-        if (user != null) {
-            console.log('data added successfully');
-            addDataUser(user.uid, title, data);
-        }
-    }
+    // const handleAddDataUser = (title, data) => {
+    //     if (user != null) {
+    //         console.log('data added successfully');
+    //         addDataUser(user.uid, title, data);
+    //     }
+    // }
     const handleChangeUpdateProfile = () => {
         setUpdateProfile((prevValue) => !prevValue);
     };
@@ -83,11 +82,14 @@ const Personal = ({ title }) => {
                                             </div>
                                         </>}
                                 </>
-                                <div className="personal-btn" data-sal-delay="400" data-sal="slide-up" data-sal-duration="1000">
-                                    <button className="edu-btn btn-small btn-secondary1" onClick={() => handleChangeUpdateProfile()}>
-                                        Chỉnh sửa tài khoản
-                                    </button>
-                                </div>
+                                <>
+                                        {updateProfile &&
+                                            <>
+                                                <ProfileForm setUpdateProfile = {setUpdateProfile}/>
+                                            </>
+                                        }
+                                </>
+                                
                             </div>
 
                         </div>

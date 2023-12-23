@@ -3,7 +3,6 @@ import { useFormik } from 'formik';
 import useFirebase from '../../hooks/use-firebase';
 import { registerSchema } from '../../utils/validation-schema';
 import ErrorMsg from './error-msg';
-import Link from 'next/link';
 import { useState } from 'react';
 import { updateProfile } from 'firebase/auth';
 import { useRouter } from 'next/router';
@@ -62,8 +61,6 @@ const RegisterForm = () => {
                 <span onClick={() => setShowPass(!showPass)} className="password-show"><i className="icon-76"></i></span>
             </div>
             {touched.password && <ErrorMsg error={errors.password} />}
-
-            
             
             <div className="form-group">
                     <button onClick={() => router.push('/')} type="submit" className="edu-btn btn-medium">Tạo Tài Khoản<i className="icon-4"></i></button>
