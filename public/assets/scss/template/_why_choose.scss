@@ -228,14 +228,22 @@
                     margin-top: 20px;
                     box-shadow: 0 0 0 0;
                     margin-bottom: 50px;
+                    
                 }
                 .personal-btn{
                     justify-content: left;
-                    .btn-small{
-                        height: 30px;
-                        font-size: 10;
-                        background-color: forestgreen;
+                    .edu-btn{
+                        &.btn-small{
+                            height: 30px;
+                            font-size: 10;
+                            background-color: forestgreen;
+                        }
+                        &::after{
+                            transition: none !important;
+                            background: none !important;
+                        }
                     }
+                    
                     
                 }
 
