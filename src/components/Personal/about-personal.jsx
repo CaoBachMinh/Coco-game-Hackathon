@@ -76,7 +76,7 @@ const Personal = ({ title }) => {
                                         <>
                                             <h3 className="section-title section-left">{displayName}</h3>
                                             <div className="personal-btn" data-sal-delay="400" data-sal="slide-up" data-sal-duration="1000">
-                                                <button className="edu-btn btn-small btn-secondary1" onClick={() => handleChangeUpdateProfile()}>
+                                                <button className="edu-btn btn-small" onClick={() => handleChangeUpdateProfile()}>
                                                     Chỉnh sửa tài khoản
                                                 </button>
                                             </div>

@@ -4,13 +4,13 @@ import ErrorMsg from '../forms/error-msg';
 import useFirebase from '../../hooks/use-firebase';
 import { registerSchema } from '../../utils/validation-schema';
 import { useState, useRef,useEffect } from 'react';
-import { updateProfile, getAuth } from 'firebase/auth';
+import {getAuth } from 'firebase/auth';
 import { useRouter } from 'next/router';
 const auth = getAuth();
 
 const ProfileForm = ({ setUpdateProfile }) => {
     // register With Email Password
-    const { addDataUser } = useFirebase();
+    const {updateData } = useFirebase();
     const user = auth.currentUser;
     const router = useRouter();
     const handleChangeUpdateProfile = () => {
@@ -31,16 +31,8 @@ const ProfileForm = ({ setUpdateProfile }) => {
     const { handleChange, handleSubmit, handleBlur, errors, values, touched } = useFormik({
         initialValues: {},
         onSubmit: (formValues, formikBag) => {
-            const { resetForm } = formikBag;
-            console.log(formValues);
-            Object.keys(formValues).forEach((field) => {
-                if (formValues[field] != null) {
-                    const value = formValues[field];
-                    addDataUser(user.uid, field, value);
-                    console.log(value);
-                    console.log(field);
-                }
-            });
+            const { resetForm } = formikBag;          
+            updateData(user.uid,formValues);
             resetForm();
         }
     })

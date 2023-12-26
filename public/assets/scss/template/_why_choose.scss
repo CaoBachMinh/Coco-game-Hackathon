@@ -261,12 +261,20 @@
         transform: translateY(0px);
         display: flex;
         justify-content: center;
-        .btn-small{
-            font-size: 12;
-            height: 35px;
-            display: flex;
-            align-items: center;
+        .edu-btn{
+            &.btn-small{
+                font-size: 12;
+                height: 35px;
+                display: flex;
+                align-items: center;
+                background-color: #2e2d2e;
+            }
+            &::after{
+                transition: none !important;
+                background: none !important;
+            }
         }
+        
     }
 }
 

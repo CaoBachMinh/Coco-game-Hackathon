@@ -5,7 +5,7 @@ import {
 import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
 import { add_user, sign_out, user_info } from "../redux/features/auth-slice";
-import { doc, setDoc, collection,getDoc} from "firebase/firestore"; 
+import { doc, setDoc, collection,getDoc, updateDoc} from "firebase/firestore"; 
 import {db,auth} from '../firebase/firebase';
 
 
@@ -122,6 +122,22 @@ const useFirebase = () => {
         }
     };
 
+    //Update user data
+    const updateData = async (uid,data) => {
+        const ref = doc(collection(db, 'user'),uid);
+        try{
+            await updateDoc(ref, data);
+            toast.success(`Cập nhật thông tin thành công.`, {
+                position: 'top-left'
+            });
+
+        } catch (error){
+            const errorMessage = error?.message;
+            toast.error(`${errorMessage}`, {
+                position: 'top-left'
+            });
+        }
+    }
     //Get User'Data
     const getDataUser = async (uid,dataget) =>{
         const userDocRef = doc(db, 'user', uid);
@@ -148,7 +164,8 @@ const useFirebase = () => {
         resetPassword,
         logout,
         addDataUser,
-        getDataUser
+        getDataUser,
+        updateData
     }
 }
 
