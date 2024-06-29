@@ -5,7 +5,7 @@ import useFirebase from '../../hooks/use-firebase';
 import { loginSchema } from '../../utils/validation-schema';
 import ErrorMsg from './error-msg';
 import { useState } from 'react';
-import { getAuth, signInWithEmailAndPassword,updateProfile } from 'firebase/auth';
+import { getAuth, signInWithEmailAndPassword,onAuthStateChanged  } from 'firebase/auth';
 import { useRouter } from 'next/router';
 
 
@@ -14,7 +14,7 @@ const LoginForm = () => {
     const auth = getAuth(); 
     const [showPass,setShowPass] = useState(false);
     // use firebase 
-    const { loginWithEmailPassword, resetPassword } = useFirebase();
+    const { loginWithEmailPassword, resetPassword, loginWithGmail } = useFirebase();
     // use formik
     const { handleChange, handleSubmit, handleBlur, errors, values, touched } = useFormik({
         initialValues: { email: '', password: '' },
@@ -39,6 +39,21 @@ const LoginForm = () => {
     const handleResetPass = (email) => {
         resetPassword(email);
     }
+
+    const reset_website = () => {
+        router.push('/');
+    }
+
+    //hadbleLoginWithGmail
+    const handleLoginEmail = async () => {
+        loginWithGmail();
+        onAuthStateChanged(auth, (user) => {
+            if (user){
+                reset_website();
+            }
+        });
+    }
+
     return (
         <form onSubmit={handleSubmit}>
             <div className="form-group">
@@ -70,18 +85,20 @@ const LoginForm = () => {
             </div>
             {touched.password && <ErrorMsg error={errors.password} />}
 
-            <div className="form-group chekbox-area">
+            <div className="form-group chekbox-area" style={{marginBottom: '15px'}} >
                 
                 <a href="#" onClick={()=> handleResetPass(values.email)} 
                 className="password-reset">Quên mật khẩu?</a>
             </div>
 
-            <div className="form-group">
-                    <button className='gsi-material-button'></button>
+            <div className='form-group'>
+                <img className='logo-dark' style={{cursor : 'pointer'}} onClick={() => handleLoginEmail()} src="/assets/images/login_logo/web_light_rd_na@1x.png">
+                </img>
             </div>
+
             <div className="form-group">
                 
-                    <button onClick={() => router.push('/')} type="submit" className="edu-btn btn-medium">Đăng nhập<i className="icon-4"></i></button>
+                    <button onClick={() => reset_website()} type="submit" className="edu-btn btn-medium">Đăng nhập<i className="icon-4"></i></button>
                 
             </div>
         </form>

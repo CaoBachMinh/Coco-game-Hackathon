@@ -26,7 +26,9 @@ const firebaseInitialization = initializeApp(firebaseConfig);
 // Initialize Firebase Authentication and get a reference to the service
 
 
+
 export const auth = getAuth(firebaseInitialization);
-export const db = getFirestore(firebaseInitialization);;
+export const db = getFirestore(firebaseInitialization);
+auth.languageCode = 'it';
 export const provider = new GoogleAuthProvider();
 

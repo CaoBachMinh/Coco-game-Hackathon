@@ -57,7 +57,7 @@ const RegisterForm = () => {
 
             <div className="form-group">
                 <label htmlFor="log-password">Mật khẩu*</label>
-                <input value={values.password} onChange={handleChange} onBlur={handleBlur} type={showPass ? "text" : "password"} name="password" id="log-password" placeholder="Password" />
+                <input value={values.password} onChange={handleChange} onBlur={handleBlur} type={showPass ? "text" : "password"} name="password" id="log-password" placeholder="Mật khẩu" />
                 <span onClick={() => setShowPass(!showPass)} className="password-show"><i className="icon-76"></i></span>
             </div>
             {touched.password && <ErrorMsg error={errors.password} />}
