@@ -77,8 +77,11 @@ const LoginForm = () => {
             </div>
 
             <div className="form-group">
+                    <button className='gsi-material-button'></button>
+            </div>
+            <div className="form-group">
                 
-                    <button onClick={() => router.push('/')} type="submit" className="edu-btn btn-medium">Sign in <i className="icon-4"></i></button>
+                    <button onClick={() => router.push('/')} type="submit" className="edu-btn btn-medium">Đăng nhập<i className="icon-4"></i></button>
                 
             </div>
         </form>

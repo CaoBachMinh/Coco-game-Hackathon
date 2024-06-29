@@ -74,7 +74,7 @@ const Personal = ({ title }) => {
                                 <>
                                     {!updateProfile &&
                                         <>
-                                            <h3 className="section-title section-left">{displayName}</h3>
+                                            <h3 className="section-title section-center">{displayName}</h3>
                                             <div className="personal-btn" data-sal-delay="400" data-sal="slide-up" data-sal-duration="1000">
                                                 <button className="edu-btn btn-small" onClick={() => handleChangeUpdateProfile()}>
                                                     Chỉnh sửa tài khoản

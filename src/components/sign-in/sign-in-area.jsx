@@ -1,13 +1,13 @@
 import React from 'react';
 import LoginForm from '../forms/login-form';
 import RegisterForm from '../forms/register-form';
-import { useState } from 'react';
-import { getAuth, onAuthStateChanged } from 'firebase/auth';
+import { getAuth, onAuthStateChanged , signInWithPopup, GoogleAuthProvider} from 'firebase/auth';
 
 
 
 const SignInArea = () => {
     const auth = getAuth();
+    const provider = new GoogleAuthProvider();
     onAuthStateChanged(auth, (user) => {
         if (user) {
           // User is signed in, see docs for a list of available properties
@@ -20,6 +20,27 @@ const SignInArea = () => {
           // User is signed out
           // ...
         }
+      });
+
+      //Sign in using Gmail
+      signInWithPopup(auth, provider)
+      .then((result) => {
+        // This gives you a Google Access Token. You can use it to access the Google API.
+        const credential = GoogleAuthProvider.credentialFromResult(result);
+        const token = credential.accessToken;
+        // The signed-in user info.
+        const user = result.user;
+        // IdP data available using getAdditionalUserInfo(result)
+        // ...
+      }).catch((error) => {
+        // Handle Errors here.
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // The email of the user's account used.
+        const email = error.customData.email;
+        // The AuthCredential type that was used.
+        const credential = GoogleAuthProvider.credentialFromError(error);
+        // ...
       });
 
   return (
