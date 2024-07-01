@@ -1,6 +1,7 @@
 import {
   createUserWithEmailAndPassword, updateProfile,
-  signInWithEmailAndPassword, sendPasswordResetEmail,signOut, signInWithPopup, GoogleAuthProvider
+  signInWithEmailAndPassword, sendPasswordResetEmail,signOut, signInWithPopup, GoogleAuthProvider,
+  deleteUser, getAuth
 } from "firebase/auth";
 import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
@@ -169,6 +170,9 @@ const useFirebase = () => {
             const user = result.user;
             // IdP data available using getAdditionalUserInfo(result)
             // ...
+            toast.success(`Đăng nhập thành công`, {
+                position: 'top-left',
+            });
         }).catch((error) => {
             // Handle Errors here.
             const errorCode = error.code;
@@ -180,6 +184,21 @@ const useFirebase = () => {
             // ...
         });
     }
+
+    const user = auth.currentUser;
+    //delete user
+    const deleteProfile = () => {
+        deleteUser(user).then(() => {
+            // User deleted.
+            toast.success(`Xóa tài khoản thành công.`, {
+                position: 'top-left'
+            });
+        }).catch((error) => {
+            // An error ocurred
+        });
+          
+    }
+
     return {
         registerWithEmailPassword,
         loginWithEmailPassword,
@@ -188,7 +207,8 @@ const useFirebase = () => {
         addDataUser,
         getDataUser,
         updateData,
-        loginWithGmail
+        loginWithGmail,
+        deleteProfile
     }
 }
 
