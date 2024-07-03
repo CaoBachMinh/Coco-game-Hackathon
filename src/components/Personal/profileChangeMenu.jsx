@@ -4,7 +4,7 @@ import useFirebase from '../../hooks/use-firebase';
 import { useState, useRef, useEffect } from 'react';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { useRouter } from 'next/router';
-import {Modal, Button, Typography } from 'antd';
+import {Modal, Button, Typography } from "antd";
 const auth = getAuth();
 
 const ProfileForm = ({ setUpdateProfile }) => {
