@@ -6,14 +6,11 @@ import HeaderTopRight from '../headers/component/header-top-right';
 import HeaderTopLeft from '../headers/component/header-top-left';
 import SearchPopup from '../../components/common/popup-modal/search-popup';
 import useSticky from '../../hooks/use-sticky';
-import { wishlistItems } from '../../redux/features/wishlist-slice';
-import useCartInfo from '../../hooks/use-cart-info';
 import OffCanvas from '../../components/common/sidebar/off-canvas';
-import Cart from './component/cart';
 import { getAuth,onAuthStateChanged } from 'firebase/auth';
 import { useEffect } from 'react';
 import { auth } from '../../firebase/firebase';
-
+import { Avatar } from '@mui/material';
 
 const Header = ({ header_style, no_top_bar, disable_full_width, disable_category }) => {
     const { sticky } = useSticky();
@@ -71,13 +68,7 @@ const Header = ({ header_style, no_top_bar, disable_full_width, disable_category
                             <div className="header-info" >
                                 {isSignIn && (
                                     <Link href="/personal">
-                                        <img src='/assets/images/rabbit.jpg' style={{
-                                            width:'70px',
-                                            height:'70px',
-                                            borderRadius:'20px',
-                                            transform:'translate(-50px)',
-                                            border:'solid 3px black'
-                                        }}/>
+                                        <Avatar src = "/assets/images/rabbit.jpg " sx ={{ width : 60, height : 60}}></Avatar>
                                     </Link>
                                 )}
                                 {isSignOut && (
@@ -92,11 +83,6 @@ const Header = ({ header_style, no_top_bar, disable_full_width, disable_category
                                 )}
                             </div>
                         </div>
-
-                        {/* <div className="header-right">
-                            
-                        </div> */}
-
                     </div>
                 </div>
             </div>
