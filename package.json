@@ -12,9 +12,13 @@
     "dependencies": {
         "@emotion/react": "^11.11.4",
         "@emotion/styled": "^11.11.5",
+        "@fontsource/poppins": "^5.0.14",
         "@fontsource/roboto": "^5.0.13",
+        "@fontsource/spartan": "^4.5.8",
         "@google-cloud/storage": "^7.7.0",
+        "@mui/icons-material": "^5.16.0",
         "@mui/material": "^5.16.0",
+        "@mui/styles": "^5.16.0",
         "@popperjs/core": "^2.11.6",
         "@reduxjs/toolkit": "^1.8.5",
         "@svgr/webpack": "^6.3.1",

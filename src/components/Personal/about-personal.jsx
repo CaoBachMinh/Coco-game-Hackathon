@@ -41,12 +41,7 @@ const Personal = ({ title }) => {
         }
         fetchData();
     }, [user])
-    // const handleAddDataUser = (title, data) => {
-    //     if (user != null) {
-    //         console.log('data added successfully');
-    //         addDataUser(user.uid, title, data);
-    //     }
-    // }
+
     const handleChangeUpdateProfile = () => {
         setUpdateProfile((prevValue) => !prevValue);
     };

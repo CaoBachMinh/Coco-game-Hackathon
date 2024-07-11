@@ -11,11 +11,10 @@ export default function Wrapper({ children }) {
         dispatch(get_wishlist_products());
         dispatch(get_cart_courses());
     }, [dispatch]);
-
     return (
         <>
             {children}
-            <ScrollToTop />
+            < ScrollToTop />
             <ToastContainer />
         </>
     )

@@ -7,41 +7,77 @@ import HeaderTopLeft from '../headers/component/header-top-left';
 import SearchPopup from '../../components/common/popup-modal/search-popup';
 import useSticky from '../../hooks/use-sticky';
 import OffCanvas from '../../components/common/sidebar/off-canvas';
-import { getAuth,onAuthStateChanged } from 'firebase/auth';
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { useEffect } from 'react';
 import { auth } from '../../firebase/firebase';
-import { Avatar } from '@mui/material';
+import useFirebase from '../../hooks/use-firebase';
+import { Avatar, Menu, MenuItem, Divider, ListItemIcon, Typography, createTheme, ThemeProvider} from '@mui/material';
+import Logout from '@mui/icons-material/Logout';
+import { useRouter } from 'next/router';
 
 const Header = ({ header_style, no_top_bar, disable_full_width, disable_category }) => {
     const { sticky } = useSticky();
-    const [isSearchOpen, setIsSearchOpen] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
-    const [isSignIn,setIsSignIn] = useState(true);
-    const [isSignOut,setIsSignOut] = useState(false);
+    const [isSignIn, setIsSignIn] = useState(true);
+    const [isSignOut, setIsSignOut] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(null);
+    const { logout } = useFirebase();
+    const router = useRouter();
+    const open = Boolean(isMenuOpen);
+    const handleMenu = (event) => {
+        setIsMenuOpen(event.currentTarget);
+    }
+    const handleClose = () => {
+        setIsMenuOpen(null);
+    };
+    const handleLogout = () => {
+        logout();
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                router.push('/');
+            }
+        })
+    }
 
+    const theme = createTheme({
+        typography: {
+            h5: {
+                fontSize: 17,
+                fontWeight: 'bold',
+            }
+        },
+        components: {
+            MuiMenuItem: {
+                styleOverrides: {
+                    root: {
+                        paddingRight: 35,
+                    }
+                }
+            }
+        }
+    });
     useEffect(() => {
         onAuthStateChanged(auth, (user) => {
             if (user) {
-              // User is signed in, see docs for a list of available properties
-              // https://firebase.google.com/docs/reference/js/auth.user
-              const uid = user.uid;
-              setIsSignIn(true);
-              setIsSignOut(false);
-              // ...
-              console.log('Sign In');
+                // User is signed in, see docs for a list of available properties
+                // https://firebase.google.com/docs/reference/js/auth.user
+                const uid = user.uid;
+                setIsSignIn(true);
+                setIsSignOut(false);
+                // ...
+                console.log('Sign In');
             } else {
                 console.log('Sign Out')
                 setIsSignIn(false);
                 setIsSignOut(true);
-              // User is signed out
-              // ...
+                // User is signed out
+                // ...
             }
-          });
+        });
     })
 
     return <>
         <header className={`edu-header header-style-${header_style ? header_style : '1'} ${disable_full_width ? 'disbale-header-fullwidth' : 'header-fullwidth'} ${no_top_bar ? 'no-topbar' : ''}`}>
-
             <div id="edu-sticky-placeholder"></div>
             <div className={`header-mainmenu ${sticky ? 'edu-sticky' : ''}`}>
                 <div className="container-fluid">
@@ -58,18 +94,67 @@ const Header = ({ header_style, no_top_bar, disable_full_width, disable_category
                         </div>
                         <div className="header-mainnav">
                             <nav className="mainmenu-nav">
-                                {/* main menu start */}
                                 <MainMenu />
-                                {/* main menu end */}
                             </nav>
                         </div>
 
                         <div className='header-top'>
                             <div className="header-info" >
                                 {isSignIn && (
-                                    <Link href="/personal">
-                                        <Avatar src = "/assets/images/rabbit.jpg " sx ={{ width : 60, height : 60}}></Avatar>
-                                    </Link>
+                                    <nav className='mainmenu-nav'>
+                                        <ListItemIcon
+                                            onClick={handleMenu}
+                                            aria-controls={open ? 'account-menu' : undefined}
+                                            aria-haspopup="true"
+                                        >
+                                            <Avatar src="/assets/images/rabbit.jpg " sx={{ width: 60, height: 60 }}></Avatar>
+                                        </ListItemIcon>
+
+                                        <Menu
+                                            anchorEl={isMenuOpen}
+                                            open={open}
+                                            onClose={handleClose}
+                                            PaperProps={{
+                                                elevation: 0,
+                                                filter: 'drop-shadow(0px 2px 8px rgba(0,0,0,0.32))',
+                                                sx: {
+                                                    overflow: 'visible',
+                                                    mt: 1.5,
+                                                    '& .MuiAvatar-root': {
+                                                        width: 25,
+                                                        height: 25,
+                                                        ml: -0.5,
+                                                        mr: 1.5,
+                                                    },
+                                                    
+                                                },
+                                            }}
+                                            disableScrollLock={true}
+                                            transformOrigin={{ horizontal: 'right', vertical: 'top' }}
+                                            anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
+                                        >
+                                            <Link href="/personal">
+                                                <ThemeProvider theme={theme}><MenuItem>
+                                                    <Avatar />
+                                                    <Typography variant='h5' style={{ color: 'black' }}> Tài Khoản</Typography>
+                                                </MenuItem></ThemeProvider>
+
+                                            </Link>
+
+                                            <Divider />
+                                            <ThemeProvider theme={theme}>
+                                                <MenuItem onClick={() => handleLogout()} sx={{ marginTop: 1 }}>
+                                                    <ListItemIcon>
+                                                        <Logout fontSize='large'></Logout>
+                                                    </ListItemIcon>
+                                                    <Typography variant='h5' style={{ color: 'black' }}>Đăng xuất</Typography>
+                                                </MenuItem>
+                                            </ThemeProvider>
+
+
+                                        </Menu>
+
+                                    </nav>
                                 )}
                                 {isSignOut && (
                                     <ul>
@@ -86,10 +171,6 @@ const Header = ({ header_style, no_top_bar, disable_full_width, disable_category
                     </div>
                 </div>
             </div>
-
-            {/* <!-- Start Search Popup  --> */}
-            <SearchPopup isSearchOpen={isSearchOpen} setIsSearchOpen={setIsSearchOpen} />
-            {/* <!-- End Search Popup  --> */}
         </header>
 
         {/* sidebar start */}
