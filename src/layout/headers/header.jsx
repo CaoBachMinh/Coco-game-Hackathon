@@ -11,7 +11,7 @@ import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { useEffect } from 'react';
 import { auth } from '../../firebase/firebase';
 import useFirebase from '../../hooks/use-firebase';
-import { Avatar, Menu, MenuItem, Divider, ListItemIcon, Typography, createTheme, ThemeProvider} from '@mui/material';
+import { Avatar, Menu, MenuItem, Divider, ListItemIcon, Typography, createTheme, ThemeProvider, withTheme} from '@mui/material';
 import Logout from '@mui/icons-material/Logout';
 import { useRouter } from 'next/router';
 
@@ -102,13 +102,15 @@ const Header = ({ header_style, no_top_bar, disable_full_width, disable_category
                             <div className="header-info" >
                                 {isSignIn && (
                                     <nav className='mainmenu-nav'>
-                                        <ListItemIcon
-                                            onClick={handleMenu}
-                                            aria-controls={open ? 'account-menu' : undefined}
-                                            aria-haspopup="true"
-                                        >
-                                            <Avatar src="/assets/images/rabbit.jpg " sx={{ width: 60, height: 60 }}></Avatar>
-                                        </ListItemIcon>
+                                        <button style={{border: "none" , background: "none", translate: -50 }}>
+                                            <ListItemIcon
+                                                onClick={handleMenu}
+                                                aria-controls={open ? 'account-menu' : undefined}
+                                                aria-haspopup="true"
+                                            >
+                                                <Avatar src="/assets/images/rabbit.jpg " sx={{ width: 60, height: 60}}></Avatar>
+                                            </ListItemIcon>
+                                        </button>
 
                                         <Menu
                                             anchorEl={isMenuOpen}
