@@ -14,6 +14,18 @@ const SEO = ({ pageTitle, font }) => (
         />
         {font && <link href={font} rel="stylesheet" />}
         <link rel="icon" href="/favicon.ico" />
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-H176GD03K7"></script>
+        <script>
+        {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-H176GD03K7');
+        `
+        }
+        </script>
     </Head>
 )
 
